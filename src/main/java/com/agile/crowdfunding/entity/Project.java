@@ -1,5 +1,6 @@
 package com.agile.crowdfunding.entity;
 
+import com.alibaba.fastjson.JSONObject;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
@@ -57,6 +58,11 @@ public class Project implements Serializable {
     @OneToOne(cascade=CascadeType.ALL)
     @JoinColumn
     private ProjectDetail projectDetail;
+
+
+    public String toString(){
+        return JSONObject.toJSONString(this);
+    }
 
     public String getProjectId() {
         return projectId;
