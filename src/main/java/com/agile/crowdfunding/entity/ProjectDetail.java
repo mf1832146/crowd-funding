@@ -1,5 +1,6 @@
 package com.agile.crowdfunding.entity;
 
+import com.alibaba.fastjson.JSONObject;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
@@ -14,9 +15,21 @@ public class ProjectDetail {
     private static final long serialVersionUID = 1L;
 
     @Id
-    @GenericGenerator(name="idGenerator", strategy="uuid")
-    @GeneratedValue(generator="idGenerator")
+    @GenericGenerator(name = "idGenerator", strategy = "uuid")
+    @GeneratedValue(generator = "idGenerator")
     private String projectDetailId;
+
+    //项目id
+    @Column
+    private String projectId;
+
+    //项目发起人
+    @Column
+    private String name;
+
+    //项目发起人电话
+    @Column
+    private String phone;
 
     //项目标题
     @Column
@@ -30,5 +43,91 @@ public class ProjectDetail {
     @Column
     private String labels;
 
-    //....待完善
+    //项目所在地
+    @Column
+    private String location;
+
+    //项目封面故事
+    @Column
+    private String coverStory;
+
+    public String toString(){
+        return JSONObject.toJSONString(this);
+    }
+
+    public static long getSerialVersionUID() {
+        return serialVersionUID;
+    }
+
+    public String getProjectDetailId() {
+        return projectDetailId;
+    }
+
+    public void setProjectDetailId(String projectDetailId) {
+        this.projectDetailId = projectDetailId;
+    }
+
+    public String getProjectId() {
+        return projectId;
+    }
+
+    public void setProjectId(String projectId) {
+        this.projectId = projectId;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getPurpose() {
+        return purpose;
+    }
+
+    public void setPurpose(String purpose) {
+        this.purpose = purpose;
+    }
+
+    public String getLabels() {
+        return labels;
+    }
+
+    public void setLabels(String labels) {
+        this.labels = labels;
+    }
+
+    public String getLocation() {
+        return location;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
+    }
+
+    public String getCoverStory() {
+        return coverStory;
+    }
+
+    public void setCoverStory(String coverStory) {
+        this.coverStory = coverStory;
+    }
 }
