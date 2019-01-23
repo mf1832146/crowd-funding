@@ -3,9 +3,9 @@ package com.agile.crowdfunding.util;
 * 用于对会话进行身份认证
 */
 
-import com.cf.entity.User;
-import com.cf.service.UserService;
-import com.cf.vo.LoginVo;
+import com.agile.crowdfunding.entity.User;
+import com.agile.crowdfunding.service.UserService;
+import com.agile.crowdfunding.vo.LoginVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -15,7 +15,7 @@ import javax.servlet.http.HttpSession;
 public class AuthorizationUtils {
 
 	@Autowired
-	 UserService userService;
+	UserService userService;
 
 	public   boolean check(HttpSession session) {
  

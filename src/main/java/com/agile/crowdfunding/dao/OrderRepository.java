@@ -11,6 +11,6 @@ public interface OrderRepository extends JpaRepository<Order,String> {
 
     public Order getFirstByOrderId(String orderId);
 
-    @Query(value="UPDATE Order order SET order.state= 1 WHERE order.orderId= ?1")
-    public void updateState(String orderId);
+    @Query(value="UPDATE Order o SET o.state= 1 WHERE o.orderId= ?1")
+    public void updateStateByOrderId(String orderId);
 }

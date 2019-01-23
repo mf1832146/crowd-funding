@@ -21,7 +21,7 @@ public class OrderServiceImpl implements OrderService {
 
     @Override
     public void updateState(String orderId) {
-        orderRepository.updateState(orderId);
+        orderRepository.updateStateByOrderId(orderId);
     }
 
     @Override
