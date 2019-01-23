@@ -22,10 +22,10 @@ public class Image {
     String name; // 图片名字
 
     @Column
-    Integer projectId; // 图片对应的项目id（如果有）
+    String projectId; // 图片对应的项目id（如果有）
 
     @Column
-    Integer userId; // 图片对应的用户id（如果有）
+    String userId; // 图片对应的用户id（如果有）
 
     public String toString(){
         return JSONObject.toJSONString(this);
@@ -55,19 +55,19 @@ public class Image {
         this.name = name;
     }
 
-    public Integer getProjectId() {
+    public String getProjectId() {
         return projectId;
     }
 
-    public void setProjectId(Integer projectId) {
+    public void setProjectId(String projectId) {
         this.projectId = projectId;
     }
 
-    public Integer getUserId() {
+    public String getUserId() {
         return userId;
     }
 
-    public void setUserId(Integer userId) {
+    public void setUserId(String userId) {
         this.userId = userId;
     }
 }

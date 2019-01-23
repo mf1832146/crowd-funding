@@ -77,4 +77,9 @@ public class ProjectServiceImpl implements ProjectService {
     public void updateState(String projectId, Integer state) {
         projectRepository.updateStateByProjectId(projectId,state);
     }
+
+    @Override
+    public void submitComment(Comment comment) {
+        commentRepository.save(comment);
+    }
 }

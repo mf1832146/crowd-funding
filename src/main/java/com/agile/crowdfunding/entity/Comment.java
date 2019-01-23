@@ -24,6 +24,9 @@ public class Comment {
     private String userId;
 
     @Column
+    private String userName;
+
+    @Column
     private String content;
 
     @Column
@@ -59,6 +62,14 @@ public class Comment {
 
     public void setUserId(String userId) {
         this.userId = userId;
+    }
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 
     public String getContent() {

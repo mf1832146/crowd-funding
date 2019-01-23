@@ -51,7 +51,11 @@ public class ProjectDetail {
     @Column
     private String coverStory;
 
-    public String toString(){
+    //项目封面图片
+    @Column
+    private String cover;
+
+    public String toString() {
         return JSONObject.toJSONString(this);
     }
 
@@ -129,5 +133,13 @@ public class ProjectDetail {
 
     public void setCoverStory(String coverStory) {
         this.coverStory = coverStory;
+    }
+
+    public String getCover() {
+        return cover;
+    }
+
+    public void setCover(String cover) {
+        this.cover = "/springUpload/coverPhoto/pid_" + projectDetailId + "/" + cover;
     }
 }

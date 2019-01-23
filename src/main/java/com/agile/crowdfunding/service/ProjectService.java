@@ -22,4 +22,6 @@ public interface ProjectService {
     //public Reward getReward(String projID);
 
     public void updateState(String projectId, Integer state);
+
+    public void submitComment(Comment comment);
 }
