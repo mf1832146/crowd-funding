@@ -12,7 +12,11 @@ import java.util.List;
 @Repository
 public interface ProjectRepository extends JpaRepository<Project,String> {
 
+<<<<<<< HEAD
+
+=======
     public List<Project> findAll();
 
     public Project findByProjectId(String projID);
+>>>>>>> master
 }
