@@ -11,8 +11,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 /**
  * Create by tang ze on 2019/1/20 16:00
  */
-@RunWith(SpringRunner.class)
-@SpringBootTest
+
 public class TradeRepositoryTest {
 
     @Autowired

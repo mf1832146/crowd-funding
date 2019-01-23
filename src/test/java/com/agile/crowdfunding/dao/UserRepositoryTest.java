@@ -1,6 +1,7 @@
 package com.agile.crowdfunding.dao;
 
 import com.agile.crowdfunding.entity.User;
+import com.agile.crowdfunding.util.Page;
 import com.alibaba.fastjson.JSONObject;
 import org.junit.Before;
 import org.junit.Test;
@@ -21,7 +22,7 @@ public class UserRepositoryTest {
     @Autowired
     private UserRepository userRepository;
 
-    @Test
+    //@Test
     public void insertData(){
         //插入数据
         User user = new User();
@@ -34,5 +35,17 @@ public class UserRepositoryTest {
         List<User> userList = userRepository.findAll();
         System.out.println(JSONObject.toJSONString(userList));
     }
+
+    @Test
+    public void queryByPage(){
+        Page page = new Page();
+        page.setStart(0);
+        page.setCount(10);
+
+        List<User> list  = userRepository.listUsers(page.getStart(),page.getCount());
+
+        System.out.println(list.size());
+    }
+
 
 }
