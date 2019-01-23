@@ -20,4 +20,6 @@ public interface ProjectService {
 
     public List<Image> getImages(String projID);
     //public Reward getReward(String projID);
+
+    public void updateState(String projectId, Integer state);
 }
