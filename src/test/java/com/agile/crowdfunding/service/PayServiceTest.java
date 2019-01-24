@@ -19,25 +19,25 @@ public class PayServiceTest {
     private AlipayService alipayService;
 
     //支付测试
-    @Test
-    public void payTest(){
-        Order order = new Order();
-
-        order.setOrderId("1");
-        order.setMoney(0.01);
-        order.setOrderName("test");
-
-        User user = new User();
-        user.setUserName("111");
-        order.setUser(user);
-
-        Project project = new Project();
-        project.setProjectId("1");
-        order.setProject(project);
-
-
-
-        System.out.println(alipayService.pay(order));
-    }
+//    @Test
+//    public void payTest(){
+//        Order order = new Order();
+//
+//        order.setOrderId("1");
+//        order.setMoney(0.01);
+//        order.setOrderName("test");
+//
+//        User user = new User();
+//        user.setUserName("111");
+//        order.setUser(user);
+//
+//        Project project = new Project();
+//        project.setProjectId("1");
+//        order.setProject(project);
+//
+//
+//
+//        System.out.println(alipayService.pay(order));
+//    }
 
 }

@@ -4,6 +4,7 @@ import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.Date;
 
 /**
  * Create by tang ze on 2019/1/21 15:43
@@ -38,7 +39,12 @@ public class Order implements Serializable {
     private Double money;
 
     //订单状态
+    @Column
     private Integer state;
+
+    //订单时间
+    @Column
+    private Date date = new Date(System.currentTimeMillis());
 
     public String getOrderId() {
         return orderId;
@@ -86,5 +92,13 @@ public class Order implements Serializable {
 
     public void setState(Integer state) {
         this.state = state;
+    }
+
+    public Date getDate() {
+        return date;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
     }
 }

@@ -72,4 +72,14 @@ public class ProjectServiceImpl implements ProjectService {
     public List<Image> getImages(String projID) {
         return imageRepository.findByProjectId(projID);
     }
+
+    @Override
+    public void updateState(String projectId, Integer state) {
+        projectRepository.updateStateByProjectId(projectId,state);
+    }
+
+    @Override
+    public void submitComment(Comment comment) {
+        commentRepository.save(comment);
+    }
 }

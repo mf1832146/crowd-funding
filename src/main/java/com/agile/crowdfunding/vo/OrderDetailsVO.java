@@ -1,29 +1,35 @@
 package com.agile.crowdfunding.vo;
 
 public class OrderDetailsVO {
-	private Integer projectId;
-	private Integer userId;
-	private Integer money;
+	private String projectId;
+	private String userId;
+	private Double money;
 	private String phone;
-	public Integer getProjectId() {
+
+	public String getProjectId() {
 		return projectId;
 	}
-	public void setProjectId(Integer projectId) {
+
+	public void setProjectId(String projectId) {
 		this.projectId = projectId;
 	}
-	public Integer getUserId() {
+
+	public String getUserId() {
 		return userId;
 	}
-	public void setUserId(Integer userId) {
+
+	public void setUserId(String userId) {
 		this.userId = userId;
 	}
-	public Integer getMoney() {
+
+	public Double getMoney() {
 		return money;
 	}
-	public void setMoney(Integer money) {
+
+	public void setMoney(Double money) {
 		this.money = money;
 	}
-	 
+
 	public String getPhone() {
 		return phone;
 	}
