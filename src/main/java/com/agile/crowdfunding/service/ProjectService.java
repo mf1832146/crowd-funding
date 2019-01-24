@@ -6,22 +6,24 @@ import java.util.List;
 
 public interface ProjectService {
 
-    public List<Project> findProjectsTop3();
+    List<Project> findProjectsTop3();
 
-    public Project getProject(String projID);
+    Project getProject(String projID);
 
-    public ProjectDetail getProjectDetail(String projID);
+    ProjectDetail getProjectDetail(String projID);
 
-    public Reward getReward(String projID);
+    Reward getReward(String projID);
 
-    public List<Comment> getComment(String projID);
+    List<Comment> getComment(String projID);
 
-    public List<ProAndUsers> getProAndUsers(String projID);
+    List<ProAndUsers> getProAndUsers(String projID);
 
-    public List<Image> getImages(String projID);
-    //public Reward getReward(String projID);
+    List<Image> getImages(String projID);
+    //Reward getReward(String projID);
 
-    public void updateState(String projectId, Integer state);
+    void updateState(String projectId, Integer state);
 
-    public void submitComment(Comment comment);
+    void submitComment(Comment comment);
+
+    List<Project> getProjectsByUserId(String userID);
 }

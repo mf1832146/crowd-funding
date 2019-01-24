@@ -15,18 +15,18 @@ import java.util.List;
  */
 public interface UserService {
 
-    public void insertUser(User user);
-    public User getById(String userId);
-    public User getByName(String username);
-    public User getByPhone(String phone);
-    public User getByMail(String mail);
-    public List<User> listUsers(Page page);
-    public void updateUserPassword(String userId, String password);
-    public void deleteById(String userId);
-    public void updateUser(User user);
-    public String login(HttpServletResponse response, LoginVo loginVo);
-    public String register(HttpServletResponse response, RegisterVo registerVo);
-    public String changePWD(HttpServletResponse response, ChangePWDVO changePWDVo);
-    public Long total();
+    void insertUser(User user);
+    User getById(String userId);
+    User getByName(String username);
+    User getByPhone(String phone);
+    User getByMail(String mail);
+    List<User> listUsers(Page page);
+    void updateUserPassword(String userId, String password);
+    void deleteById(String userId);
+    void updateUser(User user);
+    String login(HttpServletResponse response, LoginVo loginVo);
+    String register(HttpServletResponse response, RegisterVo registerVo);
+    String changePWD(HttpServletResponse response, ChangePWDVO changePWDVo);
+    Integer total();
 
 }

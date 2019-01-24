@@ -12,10 +12,12 @@ import java.util.List;
  */
 @Repository
 public interface ProjectRepository extends JpaRepository<Project,String> {
-    public List<Project> findAll();
+    List<Project> findAll();
 
-    public Project findByProjectId(String projID);
+    Project findByProjectId(String projID);
 
     @Query(value="UPDATE Project project SET project.state= ?2 WHERE project.projectId= ?1")
-    public void updateStateByProjectId(String projectId,Integer state);
+    void updateStateByProjectId(String projectId,Integer state);
+
+    List<Project> getProjectsByUserUserId(String userId);
 }
