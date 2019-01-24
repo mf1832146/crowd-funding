@@ -11,26 +11,26 @@ import java.util.List;
  */
 public interface OrderService {
 
-//    public void insertOrder(Order order);
-//
-//    public Order getById(String orderId);
-//
-//    public List<Order> listOrders(Page page);
-//
-//    public List<UserAndSups> getOrdersByUserId(String userId);
-//
-//    public List<Order> getOrdersPayed(String id);
-//
-//    public List<Order> getOrdersNoPayed(String id);
-//
-//    public List<Order> getOrdersByProId(int id);
-//
-    public void updateState(String orderId);
-//
-//    public void deleteOrder(Integer id) ;
+    void insertOrder(Order order);
 
-    public Order getOrderByOrderId(String orderId);
+    Order getById(String orderId);
 
-    public void saveOrder(Order order);
+    List<Order> listOrders(Page page);
+
+    List<UserAndSups> getOrdersByUserId(String userId);
+
+    List<Order> getOrdersPayed(String id);
+
+    List<Order> getOrdersNoPayed(String id);
+
+    List<Order> getOrdersByProId(String id);
+
+    void updateState(String orderId);
+
+    void deleteOrder(String id) ;
+
+    Order getOrderByOrderId(String orderId);
+
+    void saveOrder(Order order);
 
 }

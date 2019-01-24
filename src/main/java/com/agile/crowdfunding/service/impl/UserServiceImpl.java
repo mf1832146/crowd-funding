@@ -163,8 +163,8 @@ public class UserServiceImpl implements UserService {
         return "success";
     }
 
-    public Long total() {
-        return userRepository.countByUserIdIsNot("-1");
+    public Integer total() {
+        return userRepository.countByUserIdIsNot("-1").intValue();
     }
 
 

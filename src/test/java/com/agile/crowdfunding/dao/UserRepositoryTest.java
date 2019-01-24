@@ -46,6 +46,4 @@ public class UserRepositoryTest {
 
         System.out.println(list.size());
     }
-
-
 }

@@ -82,4 +82,9 @@ public class ProjectServiceImpl implements ProjectService {
     public void submitComment(Comment comment) {
         commentRepository.save(comment);
     }
+
+    @Override
+    public List<Project> getProjectsByUserId(String userID) {
+        return projectRepository.getProjectsByUserUserId(userID);
+    }
 }
