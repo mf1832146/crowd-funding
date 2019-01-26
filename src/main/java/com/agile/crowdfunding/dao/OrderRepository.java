@@ -4,6 +4,7 @@ import com.agile.crowdfunding.entity.Order;
 import com.agile.crowdfunding.entity.User;
 import com.agile.crowdfunding.vo.UserAndSups;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 
 import java.util.List;
@@ -38,7 +39,8 @@ public interface OrderRepository extends JpaRepository<Order,String> {
     List<Order> listOrders(int start, int num);
 
     // 更新状态
-    @Query(value="UPDATE crowd_funding_order o SET o.state= 1 WHERE o.orderId= ?1")
+    @Modifying
+    @Query(value="UPDATE Order o SET o.state= 1 WHERE o.orderId= ?1")
     void updateStateByOrderId(String orderId);
 
     // 删除订单

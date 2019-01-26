@@ -11,11 +11,13 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.transaction.Transactional;
 import java.util.List;
 
 /**
  * Create by tang ze on 2019/1/23 20:43
  */
+@Transactional
 @Service
 public class OrderServiceImpl implements OrderService {
     private static Logger logger = LoggerFactory.getLogger(OrderServiceImpl.class);

@@ -11,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import javax.transaction.Transactional;
 import java.util.List;
 
 @RunWith(SpringRunner.class)
@@ -48,7 +49,7 @@ public class OrderRepositoryTest {
     // 通过id获取订单
     @Test
     public void testBGetFirstByOrderId(){
-        System.out.println(orderRepository.getFirstByOrderId("001").getOrderId());
+        System.out.println(orderRepository.getFirstByOrderId("402881eb68889bde0168889bfe2b0003").getOrderId());
     }
 
     //通过id获取用户和支持者信息
@@ -94,6 +95,7 @@ public class OrderRepositoryTest {
     }
 
     // 更新状态
+    @Transactional
     @Test
     public void testHUpdateStateByOrderId(){
         List<Order> orderList = orderRepository.getOrdersByProId("1");
@@ -101,6 +103,7 @@ public class OrderRepositoryTest {
     }
 
     // 删除订单
+    @Transactional
     @Test
     public void testIDeleteOrderByOrderId(){
         List<Order> orderList = orderRepository.getOrdersByProId("1");

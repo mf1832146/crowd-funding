@@ -20,11 +20,13 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.transaction.Transactional;
 import java.text.SimpleDateFormat;
 
 /**
  * Create by tang ze on 2019/1/21 15:06
  */
+@Transactional
 @Service
 public class AlipayServiceImpl implements  AlipayService{
     private static Logger logger = LoggerFactory.getLogger(AlipayServiceImpl.class);

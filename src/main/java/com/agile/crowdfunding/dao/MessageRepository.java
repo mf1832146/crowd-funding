@@ -3,6 +3,7 @@ package com.agile.crowdfunding.dao;
 import com.agile.crowdfunding.entity.Message;
 import com.agile.crowdfunding.entity.Project;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
@@ -23,6 +24,7 @@ public interface MessageRepository  extends JpaRepository<Message,String> {
     public void deleteByMessageId(String messageId);
 
     // 更新消息的状态（未读->已读）
+    @Modifying
     @Query(value="UPDATE Message message SET message.state= 1 WHERE message.messageId= ?1")
     public void updateStateByMessageId(String messageId);
 
