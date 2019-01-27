@@ -14,7 +14,7 @@ import java.util.List;
 /**
  * Create by tang ze on 2019/1/20 15:35
  */
-public interface UserRepository extends PagingAndSortingRepository<User,String> {
+public interface UserRepository extends JpaRepository<User,String> {
 
     public User findFirstByUserNameAndPassword(String userName,String password);
 
@@ -27,8 +27,6 @@ public interface UserRepository extends PagingAndSortingRepository<User,String> 
     public User findFirstByMail(String mail);
 
     public void deleteByUserId(String userId);
-
-    public List<User> findAll();
 
     public Long countByUserIdIsNot(String userId);
 
