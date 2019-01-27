@@ -4,11 +4,12 @@ import com.alibaba.fastjson.JSONObject;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.sql.Timestamp;
 
 @Entity
 @Table(name = "CROWD_FUNDING_COMMENT")
-public class Comment {
+public class Comment implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -34,10 +35,6 @@ public class Comment {
 
     public String toString(){
         return JSONObject.toJSONString(this);
-    }
-
-    public static long getSerialVersionUID() {
-        return serialVersionUID;
     }
 
     public String getCommentId() {

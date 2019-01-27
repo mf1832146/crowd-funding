@@ -38,8 +38,8 @@ public interface OrderRepository extends JpaRepository<Order,String> {
     List<Order> listOrders(int start, int num);
 
     // 更新状态
-    @Query(value="UPDATE crowd_funding_order o SET o.state= 1 WHERE o.orderId= ?1")
-    void updateStateByOrderId(String orderId);
+//    @Query(value="UPDATE crowd_funding_order o SET o.state= 1 WHERE o.orderId= ?1")
+//    void updateStateByOrderId(String orderId);
 
     // 删除订单
     void deleteOrderByOrderId(String orderId);

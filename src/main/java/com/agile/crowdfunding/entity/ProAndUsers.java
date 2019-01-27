@@ -4,11 +4,12 @@ import com.alibaba.fastjson.JSONObject;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.sql.Date;
 
 @Entity
 @Table(name = "CROWD_FUNDING_PROANDUSERS")
-public class ProAndUsers {
+public class ProAndUsers implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @Id
@@ -31,10 +32,6 @@ public class ProAndUsers {
 
     public String toString() {
         return JSONObject.toJSONString(this);
-    }
-
-    public static long getSerialVersionUID() {
-        return serialVersionUID;
     }
 
     public String getProAndUsersId() {

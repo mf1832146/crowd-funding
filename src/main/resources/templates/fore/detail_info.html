@@ -183,7 +183,7 @@
 
     function submitComment() {
         //异步提交数据
-        var username = /*[[${flag}]]*/;
+        var userName = /*[[${flag}]]*/;
         var pid = /*[[${project.projectId}]]*/;
         var userId = /*[[${userId}]]*/;
         var content = $("#txt_comment").val();
@@ -195,7 +195,7 @@
                 data: {
                     projectId: pid,
                     userId: userId,
-                    username: username,
+                    userName: userName,
                     content: $("#txt_comment").val()
                 },
                 success: function (data) {

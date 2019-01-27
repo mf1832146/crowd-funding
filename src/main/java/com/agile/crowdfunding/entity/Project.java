@@ -17,8 +17,8 @@ public class Project implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @Id
-    @GenericGenerator(name="idGenerator", strategy="uuid")
-    @GeneratedValue(generator="idGenerator")
+    @GenericGenerator(name = "idGenerator", strategy = "uuid")
+    @GeneratedValue(generator = "idGenerator")
     private String projectId;
 
     //项目名称
@@ -26,8 +26,8 @@ public class Project implements Serializable {
     private String name;
 
     //项目发起人
-    @ManyToOne(cascade={CascadeType.MERGE,CascadeType.REFRESH},optional=false)
-    @JoinColumn(name="user_id")
+    @ManyToOne(cascade = {CascadeType.MERGE, CascadeType.REFRESH}, optional = false)
+    @JoinColumn(name = "user_id")
     private User user;
 
     //项目状态
@@ -55,12 +55,12 @@ public class Project implements Serializable {
     private Timestamp endTime;
 
     //项目详情
-    @OneToOne(cascade=CascadeType.ALL)
-    @JoinColumn
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "projectId", insertable = false, updatable = false)
     private ProjectDetail projectDetail;
 
 
-    public String toString(){
+    public String toString() {
         return JSONObject.toJSONString(this);
     }
 
@@ -134,5 +134,13 @@ public class Project implements Serializable {
 
     public void setUser(User user) {
         this.user = user;
+    }
+
+    public ProjectDetail getProjectDetail() {
+        return projectDetail;
+    }
+
+    public void setProjectDetail(ProjectDetail projectDetail) {
+        this.projectDetail = projectDetail;
     }
 }

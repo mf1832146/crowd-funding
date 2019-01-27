@@ -2,8 +2,6 @@ package com.agile.crowdfunding.dao;
 
 
 import com.agile.crowdfunding.entity.Project;
-import com.agile.crowdfunding.entity.Trade;
-import com.agile.crowdfunding.entity.User;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,10 +18,11 @@ public class ProjectRepositoryTest {
     ProjectRepository projectRepository;
 
     @Test
-    public void insert(){
+    public void insert() {
 
-        List<Project> projects = projectRepository.findAll();
+        List<Project> projects = projectRepository.findFirst3ByType(1);
 
+        System.out.println(projects.get(1).toString());
         System.out.println(projects.size());
     }
 

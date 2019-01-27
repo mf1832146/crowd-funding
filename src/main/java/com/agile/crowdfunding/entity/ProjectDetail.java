@@ -4,6 +4,7 @@ import com.alibaba.fastjson.JSONObject;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 /**
  * Create by tang ze on 2019/1/20 16:21
@@ -11,7 +12,7 @@ import javax.persistence.*;
  */
 @Entity
 @Table(name = "CROWD_FUNDING_PROJECT_DETAIL")
-public class ProjectDetail {
+public class ProjectDetail implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @Id
@@ -55,12 +56,12 @@ public class ProjectDetail {
     @Column
     private String cover;
 
+    //项目类型
+    @Column
+    private Integer type;
+
     public String toString() {
         return JSONObject.toJSONString(this);
-    }
-
-    public static long getSerialVersionUID() {
-        return serialVersionUID;
     }
 
     public String getProjectDetailId() {
@@ -141,5 +142,13 @@ public class ProjectDetail {
 
     public void setCover(String cover) {
         this.cover = "/springUpload/coverPhoto/pid_" + projectDetailId + "/" + cover;
+    }
+
+    public Integer getType() {
+        return type;
+    }
+
+    public void setType(Integer type) {
+        this.type = type;
     }
 }

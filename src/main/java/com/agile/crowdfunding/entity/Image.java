@@ -5,10 +5,11 @@ import com.alibaba.fastjson.JSONObject;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 @Entity
 @Table(name = "CROWD_FUNDING_IMAGE")
-public class Image {
+public class Image implements Serializable {
 
     @Id
     @GenericGenerator(name="idGenerator", strategy="uuid")

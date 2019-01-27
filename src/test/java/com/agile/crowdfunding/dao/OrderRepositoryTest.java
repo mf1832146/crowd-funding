@@ -97,7 +97,7 @@ public class OrderRepositoryTest {
     @Test
     public void testHUpdateStateByOrderId(){
         List<Order> orderList = orderRepository.getOrdersByProId("1");
-        orderRepository.updateStateByOrderId(orderList.get(0).getOrderId());
+        //orderRepository.updateStateByOrderId(orderList.get(0).getOrderId());
     }
 
     // 删除订单

@@ -75,7 +75,7 @@ public class ProjectServiceImpl implements ProjectService {
 
     @Override
     public void updateState(String projectId, Integer state) {
-        projectRepository.updateStateByProjectId(projectId,state);
+        projectRepository.updateStateByProjectId(projectId, state);
     }
 
     @Override
@@ -86,5 +86,16 @@ public class ProjectServiceImpl implements ProjectService {
     @Override
     public List<Project> getProjectsByUserId(String userID) {
         return projectRepository.getProjectsByUserUserId(userID);
+    }
+
+    @Override
+    public List<Project> getProjectByType(Integer type) {
+        return projectRepository.findFirst3ByType(type);
+    }
+
+    @Override
+    public List<Project> searchProject(String keyWord, int type, int state, String order) {
+        keyWord = '%' + keyWord + '%';
+        return projectRepository.findByNameContainingAndTypeAndState(keyWord, type, state);
     }
 }

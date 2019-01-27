@@ -319,35 +319,35 @@
     <div class="small-introductions">
         <div class="small-introductions-titles">公益</div>
         <div class="small-introductions-contents">
-            <div class="project" th:each="com:${commonWeal}">
+            <div class="project" th:each="commonWeal:${commonWeal}">
                 <div class="project-image">
-                    <a th:href="@{'/detail/showDetail?projID='+${com.id}}"> <img
-                            class="cover-image" th:src="${com.cover}" style="cursor: pointer"/>
+                    <a th:href="@{'/detail/showDetail?projID='+${commonWeal.projectId}}"> <img
+                            class="cover-image" th:src="${commonWeal.projectDetail.cover}" style="cursor: pointer"/>
                     </a>
                 </div>
-                <div class="title" th:text="${com.name}"></div>
+                <div class="title" th:text="${commonWeal.projectDetail.title}"></div>
                 <!-- 限制长度 -->
                 <div class="General-information"
-                     th:text="${#strings.substring(com.purpose,0,95)+'......'}"
-                     th:if="${#strings.length(com.purpose)>100}"></div>
-                <div class="General-information" th:text="${com.purpose}"
-                     th:if="${#strings.length(com.purpose)<100}"></div>
+                     th:text="${#strings.substring(commonWeal.projectDetail.purpose,0,95)+'......'}"
+                     th:if="${#strings.length(commonWeal.projectDetail.purpose)>100}"></div>
+                <div class="General-information" th:text="${commonWeal.projectDetail.purpose}"
+                     th:if="${#strings.length(commonWeal.projectDetail.purpose)<100}"></div>
 
                 <div class="main-information">
                     <div class="oneofthree-info">
                         <div style="color: rgb(43, 4, 117)">已筹款</div>
                         <div style="color: rgb(255, 108, 108);"
-                             th:text="￥+${com.currentMoney}"></div>
+                             th:text="￥+${commonWeal.currentMoney}"></div>
                     </div>
                     <div class="oneofthree-info">
                         <div style="color: rgb(43, 4, 117)">截止日期</div>
-                        <div style="color: rgb(255, 108, 108);" th:text="${com.endTime}"></div>
+                        <div style="color: rgb(255, 108, 108);" th:text="${commonWeal.endTime}"></div>
 
                     </div>
                     <div class="oneofthree-info">
                         <div style="color: rgb(43, 4, 117)">筹款目标</div>
                         <div style="color: rgb(255, 108, 108);"
-                             th:text="￥+${com.targetMoney}"></div>
+                             th:text="￥+${commonWeal.targetMoney}"></div>
 
                     </div>
                 </div>
@@ -363,17 +363,17 @@
         <div class="small-introductions-contents">
             <div class="project" th:each="at:${art}">
                 <div class="project-image">
-                    <a th:href="@{'/detail/showDetail?projID='+${at.id}}"> <img
-                            class="cover-image" th:src="${at.cover}" style="cursor: pointer"/>
+                    <a th:href="@{'/detail/showDetail?projID='+${at.projectId}}"> <img
+                            class="cover-image" th:src="${at.projectDetail.cover}" style="cursor: pointer"/>
                     </a>
                 </div>
-                <div class="title" th:text="${at.name}"></div>
+                <div class="title" th:text="${at.projectDetail.title}"></div>
                 <!-- 限制长度 -->
                 <div class="General-information"
-                     th:text="${#strings.substring(at.purpose,0,95)+'......'}"
-                     th:if="${#strings.length(at.purpose)>100}"></div>
-                <div class="General-information" th:text="${at.purpose}"
-                     th:if="${#strings.length(at.purpose)<100}"></div>
+                     th:text="${#strings.substring(at.projectDetail.purpose,0,95)+'......'}"
+                     th:if="${#strings.length(at.projectDetail.purpose)>100}"></div>
+                <div class="General-information" th:text="${at.projectDetail.purpose}"
+                     th:if="${#strings.length(at.projectDetail.purpose)<100}"></div>
 
                 <div class="main-information">
                     <div class="oneofthree-info">
@@ -390,7 +390,6 @@
                         <div style="color: rgb(43, 4, 117)">筹款目标</div>
                         <div style="color: rgb(255, 108, 108);"
                              th:text="￥+${at.targetMoney}"></div>
-
                     </div>
                 </div>
             </div>
@@ -404,17 +403,17 @@
         <div class="small-introductions-contents">
             <div class="project" th:each="arg:${agriculture}">
                 <div class="project-image">
-                    <a th:href="@{'/detail/showDetail?projID='+${arg.id}}"> <img
-                            class="cover-image" th:src="${arg.cover}" style="cursor: pointer"/>
+                    <a th:href="@{'/detail/showDetail?projID='+${arg.projectId}}"> <img
+                            class="cover-image" th:src="${arg.projectDetail.cover}" style="cursor: pointer"/>
                     </a>
                 </div>
-                <div class="title" th:text="${arg.name}"></div>
+                <div class="title" th:text="${arg.projectDetail.title}"></div>
                 <!-- 限制长度 -->
                 <div class="General-information"
-                     th:text="${#strings.substring(arg.purpose,0,95)+'......'}"
-                     th:if="${#strings.length(arg.purpose)>100}"></div>
-                <div class="General-information" th:text="${arg.purpose}"
-                     th:if="${#strings.length(arg.purpose)<100}"></div>
+                     th:text="${#strings.substring(arg.projectDetail.purpose,0,95)+'......'}"
+                     th:if="${#strings.length(arg.projectDetail.purpose)>100}"></div>
+                <div class="General-information" th:text="${arg.projectDetail.purpose}"
+                     th:if="${#strings.length(arg.projectDetail.purpose)<100}"></div>
 
 
                 <div class="main-information">
@@ -445,17 +444,17 @@
         <div class="small-introductions-contents">
             <div class="project" th:each="pub:${publish}">
                 <div class="project-image">
-                    <a th:href="@{'/detail/showDetail?projID='+${pub.id}}"> <img
-                            class="cover-image" th:src="${pub.cover}" style="cursor: pointer"/>
+                    <a th:href="@{'/detail/showDetail?projID='+${pub.projectId}}"> <img
+                            class="cover-image" th:src="${pub.projectDetail.cover}" style="cursor: pointer"/>
                     </a>
                 </div>
-                <div class="title" th:text="${pub.name}"></div>
+                <div class="title" th:text="${pub.projectDetail.title}"></div>
                 <!-- 限制长度 -->
                 <div class="General-information"
-                     th:text="${#strings.substring(pub.purpose,0,95)+'......'}"
-                     th:if="${#strings.length(pub.purpose)>100}"></div>
-                <div class="General-information" th:text="${pub.purpose}"
-                     th:if="${#strings.length(pub.purpose)<100}"></div>
+                     th:text="${#strings.substring(pub.projectDetail.purpose,0,95)+'......'}"
+                     th:if="${#strings.length(pub.projectDetail.purpose)>100}"></div>
+                <div class="General-information" th:text="${pub.projectDetail.purpose}"
+                     th:if="${#strings.length(pub.projectDetail.purpose)<100}"></div>
 
                 <div class="main-information">
                     <div class="oneofthree-info">
@@ -485,13 +484,13 @@
         <div class="small-introductions-contents">
             <div class="project" th:each="amu:${amusement}">
                 <div class="project-image">
-                    <a th:href="@{'/detail/showDetail?projID='+${amu.id}}"> <img
-                            class="cover-image" th:src="${amu.cover}" style="cursor: pointer"/>
+                    <a th:href="@{'/detail/showDetail?projID='+${amu.projectId}}"> <img
+                            class="cover-image" th:src="${amu.projectDetail.cover}" style="cursor: pointer"/>
                     </a>
                 </div>
-                <div class="title" th:text="${amu.name}"></div>
+                <div class="title" th:text="${amu.projectDetail.title}"></div>
                 <div class="General-information"
-                     th:text="${#strings.substring(amu.purpose,0,95)+'......'}">
+                     th:text="${#strings.substring(amu.projectDetail.purpose,0,95)+'......'}">
                 </div>
 
                 <div class="main-information">
@@ -521,17 +520,17 @@
         <div class="small-introductions-contents">
             <div class="project" th:each="oth:${other}">
                 <div class="project-image">
-                    <a th:href="@{'/detail/showDetail?projID='+${oth.id}}"> <img
-                            class="cover-image" th:src="${oth.cover}" style="cursor: pointer"/>
+                    <a th:href="@{'/detail/showDetail?projID='+${oth.projectId}}"> <img
+                            class="cover-image" th:src="${oth.projectDetail.cover}" style="cursor: pointer"/>
                     </a>
                 </div>
-                <div class="title" th:text="${oth.name}"></div>
+                <div class="title" th:text="${oth.projectDetail.title}"></div>
                 <!-- 限制长度 -->
                 <div class="General-information"
-                     th:text="${#strings.substring(oth.purpose,0,95)+'......'}"
-                     th:if="${#strings.length(oth.purpose)>100}"></div>
-                <div class="General-information" th:text="${oth.purpose}"
-                     th:if="${#strings.length(oth.purpose)<100}"></div>
+                     th:text="${#strings.substring(oth.projectDetail.purpose,0,95)+'......'}"
+                     th:if="${#strings.length(oth.projectDetail.purpose)>100}"></div>
+                <div class="General-information" th:text="${oth.projectDetail.purpose}"
+                     th:if="${#strings.length(oth.projectDetail.purpose)<100}"></div>
 
                 <div class="main-information">
                     <div class="oneofthree-info">

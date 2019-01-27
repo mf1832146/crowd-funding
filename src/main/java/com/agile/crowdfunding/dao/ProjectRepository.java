@@ -11,13 +11,18 @@ import java.util.List;
  * Create by tang ze on 2019/1/20 16:20
  */
 @Repository
-public interface ProjectRepository extends JpaRepository<Project,String> {
+public interface ProjectRepository extends JpaRepository<Project, String> {
     List<Project> findAll();
 
     Project findByProjectId(String projID);
 
-    @Query(value="UPDATE Project project SET project.state= ?2 WHERE project.projectId= ?1")
-    void updateStateByProjectId(String projectId,Integer state);
+    @Query(value = "UPDATE Project project SET project.state= ?2 WHERE project.projectId= ?1")
+    void updateStateByProjectId(String projectId, Integer state);
 
     List<Project> getProjectsByUserUserId(String userId);
+
+    List<Project> findFirst3ByType(Integer type);
+
+    List<Project> findByNameContainingAndTypeAndState(String keyWord, Integer state, Integer type);
+
 }

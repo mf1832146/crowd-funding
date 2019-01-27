@@ -26,4 +26,8 @@ public interface ProjectService {
     void submitComment(Comment comment);
 
     List<Project> getProjectsByUserId(String userID);
+
+    List<Project> getProjectByType(Integer type);
+
+    List<Project> searchProject(String keyWord, int type, int state, String order);
 }
