@@ -1,7 +1,9 @@
 package com.agile.crowdfunding.controller;
 
 import com.agile.crowdfunding.entity.*;
+import com.agile.crowdfunding.service.MessageService;
 import com.agile.crowdfunding.service.ProjectService;
+import com.agile.crowdfunding.vo.LoginVo;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,11 +24,24 @@ public class ProjectController {
     @Autowired
     ProjectService projectService;
 
+    @Autowired
+    private MessageService messageService;
+
+    public void setLoginMessage(HttpSession session,Model model){
+        LoginVo loginVo = (LoginVo) session.getAttribute("loginVo");
+        String id = (String) session.getAttribute("myId");
+        if(loginVo!= null) {
+            model.addAttribute("flag", loginVo.getUsername());
+            model.addAttribute("userId", id);
+            model.addAttribute("messageNum", messageService.totalMessage(id));
+        }
+        else
+            model.addAttribute("flag", "unlogin");
+    }
+
     @RequestMapping(value = "/fore/index")
     public String toIndex(HttpSession session, Model model) {
-
-        model.addAttribute("flag", "test");
-        model.addAttribute("userId", "2c93f9fd686a4bd001686a4be4240000");
+        setLoginMessage(session,model);
 
         // 查找同一类型的三个项目
         List<Project> listCommonWeal = projectService.getProjectByType(1); // 查询出公益类型的项目
@@ -58,15 +73,7 @@ public class ProjectController {
         }
         session.setAttribute("preProject", projID);
 
-//        LoginVo loginVo = (LoginVo) session.getAttribute("loginVo");   ---------------需要修改
-//        Integer id = (Integer) session.getAttribute("myId");
-//        if(loginVo!= null) {
-        model.addAttribute("flag", "test");
-        model.addAttribute("userId", "2c93f9fd686a4bd001686a4be4240000");
-        //model.addAttribute("messageNum", messageService.totalMessage(id));
-//        }
-//        else
-//            model.addAttribute("flag", "unlogin");                ---------------需要修改
+        setLoginMessage(session,model);
 
         //获取项目信息
         Project project = projectService.getProject(projID.toString());
@@ -109,8 +116,7 @@ public class ProjectController {
     @RequestMapping("/search/searchType")
     @ResponseBody
     public String searchType(HttpSession session, String type, Model model) {
-        model.addAttribute("flag", "test");
-        model.addAttribute("userId", "2c93f9fd686a4bd001686a4be4240000");
+        setLoginMessage(session,model);
 
         SearchVo searchVo = new SearchVo();
         searchVo.setKeyWord("");
