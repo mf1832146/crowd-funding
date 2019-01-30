@@ -2,12 +2,19 @@ package com.agile.crowdfunding.service.impl;
 
 import com.agile.crowdfunding.dao.*;
 import com.agile.crowdfunding.entity.*;
+import com.agile.crowdfunding.exception.GlobalException;
+import com.agile.crowdfunding.result.CodeMsg;
 import com.agile.crowdfunding.service.ProjectService;
+import com.agile.crowdfunding.vo.ProjectInfoVo;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
+import java.sql.Timestamp;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 
 
@@ -99,5 +106,59 @@ public class ProjectServiceImpl implements ProjectService {
     public List<Project> searchProject(String keyWord, int type, int state, String order) {
         keyWord = '%' + keyWord + '%';
         return projectRepository.findByNameContainingAndTypeAndState(keyWord, type, state);
+    }
+
+    @Override
+    public String launchProject(Integer uid, ProjectInfoVo projectInfoVo) {
+        if (projectInfoVo == null) {
+            throw new GlobalException(CodeMsg.SERVER_ERROR);
+        }
+        org.slf4j.Logger log = LoggerFactory.getLogger(ProjectService.class);
+
+        // PROJECT
+        /////////////////////////
+        Project newProject = new Project();
+        newProject.setName(projectInfoVo.getProTitle());
+        User tmpUser = new User();
+        tmpUser.setUserId(""+uid);
+        newProject.setUser(tmpUser);// 测试用
+        newProject.setState(1);
+        newProject.setType(1);
+        newProject.setTargetMoney(projectInfoVo.getProTargetMoney());
+        Timestamp sqlTime = new Timestamp(System.currentTimeMillis());
+        newProject.setCreateTime(sqlTime);
+        Calendar calendar = Calendar.getInstance();
+        calendar.add(Calendar.DATE, projectInfoVo.getProLastTime());
+        sqlTime = new Timestamp(System.currentTimeMillis());
+        newProject.setEndTime(sqlTime);
+        projectRepository.save(newProject);
+        log.info(newProject.getProjectId());
+
+        // PROJECT_DETAIL
+        /////////////////////////
+        ProjectDetail newProjectDetail = new ProjectDetail();
+        newProjectDetail.setProjectId(newProject.getProjectId());
+        newProjectDetail.setName(projectInfoVo.getProName());
+        newProjectDetail.setPhone(projectInfoVo.getProPhoneNumber());
+
+        newProjectDetail.setTitle(projectInfoVo.getProTitle());
+        newProjectDetail.setPurpose(projectInfoVo.getProPurpose());
+        newProjectDetail.setLocation(projectInfoVo.getProLocation());
+        newProjectDetail.setLabels(projectInfoVo.getProLabels());
+        newProjectDetail.setCoverStory(projectInfoVo.getProCoverStory());
+
+        projectDetailRepository.save(newProjectDetail);
+
+        // RETURN_LEVEL
+        /////////////////////////
+        ReturnLevel newReturnLevel = new ReturnLevel();
+        newReturnLevel.setProjectId(newProject.getProjectId());
+        newReturnLevel.setReturnType(projectInfoVo.getProTypeOfReward());
+        newReturnLevel.setOrderMoney(projectInfoVo.getProAmountForReward());
+        newReturnLevel.setReturnDetail(projectInfoVo.getProReward());
+        //修改
+        // projectDao.insertReturnLevel(newReturnLevel);
+
+        return newProject.getProjectId();
     }
 }

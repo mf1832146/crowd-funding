@@ -1,6 +1,7 @@
 package com.agile.crowdfunding.service;
 
 import com.agile.crowdfunding.entity.*;
+import com.agile.crowdfunding.vo.ProjectInfoVo;
 
 import java.util.List;
 
@@ -30,4 +31,6 @@ public interface ProjectService {
     List<Project> getProjectByType(Integer type);
 
     List<Project> searchProject(String keyWord, int type, int state, String order);
+
+    String launchProject(Integer uid, ProjectInfoVo projectInfoVo);
 }

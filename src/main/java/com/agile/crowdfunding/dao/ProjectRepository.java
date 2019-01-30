@@ -22,4 +22,6 @@ public interface ProjectRepository extends JpaRepository<Project,String> {
     void updateStateByProjectId(String projectId,Integer state);
 
     List<Project> getProjectsByUserUserId(String userId);
+
+
 }
