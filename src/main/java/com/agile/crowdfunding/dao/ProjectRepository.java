@@ -26,4 +26,5 @@ public interface ProjectRepository extends JpaRepository<Project,String> {
     List<Project> findFirst3ByType(Integer type);
 
     List<Project> findByNameContainingAndTypeAndState(String name, int type, int state);
+
 }
