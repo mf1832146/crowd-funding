@@ -43,7 +43,7 @@
 					<tbody th:remove="all-but-first">
 						<tr th:each="pro : ${projects}">
 							<td><a class="btn btn-link" th:text="${pro.name}"
-								th:href="'/detail/showDetail?projID='+${pro.id}"></a></td>
+								th:href="'/detail/showDetail?projID='+${pro.projectId}"></a></td>
 							<td
 								th:text="${'￥' + #numbers.formatDecimal(pro.targetMoney, 1, 2)}">2</td>
 							<td

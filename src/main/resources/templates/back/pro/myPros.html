@@ -49,9 +49,9 @@ function getCollect(){
 					<!-- th:remove被处理时会被删除 -->
 													
 					<tbody th:remove="all-but-first">
-						<tr th:each="pro : ${projects}" th:onclick="'javascript:getCollect('+${pro.id} +')'">	
+						<tr th:each="pro : ${projects}" th:onclick="'javascript:getCollect('+${pro.projectId} +')'">
 							<td><a class="btn btn-link" th:text="${pro.name}"
-								th:href="'/detail/showDetail?projID='+${pro.id}"></a></td>
+								th:href="'/detail/showDetail?projID='+${pro.projectId}"></a></td>
 							<td
 								th:text="${'￥' + #numbers.formatDecimal(pro.targetMoney, 1, 2)}">2</td>
 							<td
@@ -82,7 +82,7 @@ function getCollect(){
 							th:href="''">提款审核中</a >
 							</td>
 							<td align="center" th:if="${pro.state} == 20"><a
-								class="btn btn-success"  th:href="'/pro/fore/updateState?id='+${pro.id}+'&amp;state=1'">修改</a>
+								class="btn btn-success"  th:href="'/pro/fore/updateState?id='+${pro.projectId}+'&amp;state=1'">修改</a>
 							</td>
 							<td align="center" th:if="${pro.state} == 5">
 							<a  class="btn btn-success"  

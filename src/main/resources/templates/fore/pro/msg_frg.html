@@ -60,7 +60,7 @@
 							</div>
 							<div class="uc-dialog-backicon">
 								<button onclick="uc_closeDialogAllmsgdetail(this)"
-									th:onclick="'updateMsg('+${msg.id}+')'"
+									th:onclick="'updateMsg('+${msg.messageId}+')'"
 									th:if="${msg.state} == 0">关闭</button>
 								<button onclick="uc_closeDialogAllmsgdetail(this)"
 									th:if="${msg.state} == 1">关闭</button>
@@ -73,7 +73,7 @@
 						<p th:text="${msg.time}"></p>
 					</td>
 					
-					<td><button class="btn btn-danger" th:onclick="'deleteMsg('+${msg.id}+')'">删除</button></td>
+					<td><button class="btn btn-danger" th:onclick="'deleteMsg('+${msg.messageId}+')'">删除</button></td>
 				</tr>
 			</tbody>
 		</table>
@@ -121,14 +121,14 @@
 							</div>
 							<div class="uc-dialog-backicon">
 								<button onclick="uc_closeDialogUnreadmsgdetail(this)"
-									th:onclick="'updateMsg('+${msg.id}+')'">关闭</button>
+									th:onclick="'updateMsg('+${msg.messageId}+')'">关闭</button>
 							</div>
 						</div>
 					</td>
 					<td>
 						<p th:text="${msg.time}"></p>
 					</td>
-					<td><button class="btn btn-danger" th:onclick="'deleteMsg('+${msg.id}+')'">删除</button></td>
+					<td><button class="btn btn-danger" th:onclick="'deleteMsg('+${msg.messageId}+')'">删除</button></td>
 
 				</tr>
 			</tbody>
@@ -184,7 +184,7 @@
 					<td>
 						<p th:text="${msg.time}"></p>
 					</td>
-					<td><button class="btn btn-danger" th:onclick="'deleteMsg('+${msg.id}+')'">删除</button></td>
+					<td><button class="btn btn-danger" th:onclick="'deleteMsg('+${msg.messageId}+')'">删除</button></td>
 				</tr>
 			</tbody>
 		</table>

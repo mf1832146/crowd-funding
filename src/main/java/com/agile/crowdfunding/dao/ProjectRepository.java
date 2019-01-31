@@ -13,7 +13,9 @@ import java.util.List;
  */
 @Repository
 public interface ProjectRepository extends JpaRepository<Project,String> {
-    List<Project> findAll();
+    @Query(value ="select * from crowd_funding_project c "
+            + "limit ?1,?2 ",nativeQuery = true)
+    List<Project> listProjects(int start, int num);
 
     Project findByProjectId(String projID);
 
@@ -26,5 +28,9 @@ public interface ProjectRepository extends JpaRepository<Project,String> {
     List<Project> findFirst3ByType(Integer type);
 
     List<Project> findByNameContainingAndTypeAndState(String name, int type, int state);
+
+    List<Project> findAll();
+
+    List<Project> getProjectsByState(Integer state);
 
 }

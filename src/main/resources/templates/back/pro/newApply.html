@@ -44,14 +44,14 @@ vertical-align: middle!important;
 					<!-- th:remove被处理时会被删除 -->
 					<tbody th:remove="all-but-first">
 						<tr th:each="pro : ${projects}">
-							<td ><a class="btn btn-link" th:text="${pro.name}" th:href="'/detail/showDetail?projID='+${pro.id}"></a></td>
+							<td ><a class="btn btn-link" th:text="${pro.name}" th:href="'/detail/showDetail?projID='+${pro.projectId}"></a></td>
 							<td th:text="${'￥' + #numbers.formatDecimal(pro.targetMoney, 1, 2)}">2</td>
-							<td ><a class="btn btn-link" th:text="${pro.userId}" th:href="'/user/back/userDetails?id='+${pro.userId}"></a></td>
+							<td ><a class="btn btn-link" th:text="${pro.user.userId}" th:href="'/user/back/userDetails?id='+${pro.user.userId}"></a></td>
 							<td th:text="${pro.createTime}">3</td>
 							<td th:text="${pro.endTime}">3</td>
  							<td align="center">  
-							  	<a class="btn btn-success" th:href="'/pro/back/updateState?id='+${pro.id}+'&amp;state=21'">通过</a>
-							  	<a class="btn btn-danger"  th:href="'/pro/back/updateState?id='+${pro.id}+'&amp;state=20'">拒绝</a>
+							  	<a class="btn btn-success" th:href="'/pro/back/updateState?id='+${pro.projectId}+'&amp;state=21'">通过</a>
+							  	<a class="btn btn-danger"  th:href="'/pro/back/updateState?id='+${pro.projectId}+'&amp;state=20'">拒绝</a>
  							</td>
 
 						</tr>

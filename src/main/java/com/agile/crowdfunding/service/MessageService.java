@@ -9,12 +9,12 @@ import java.util.List;
  */
 public interface MessageService {
 
-    public String sendMessage(String projectId,Integer state);
-    public void sendMessageToSupporter(String projectId,String info);
-    public void sendMessageToSponstor(String userId,String info);
-    public List<Message> getMessagesByUserId(String userId);
-    public void setState(String messageId);
-    public void deleteMsg(String messageId);
-    public Long totalMessage(String userId);
+    String sendMessage(String projectId,Integer state);
+    void sendMessageToSupporter(String projectId,String info);
+    void sendMessageToSponstor(String userId,String info);
+    List<Message> getMessagesByUserId(String userId);
+    void setState(String messageId);
+    void deleteMsg(String messageId);
+    Long totalMessage(String userId);
 
 }
