@@ -20,8 +20,8 @@
 
 
 	<div class = "text-center">
-	<h3 th:text="' 用户ID'+${user.id}"></h3>
-	<h3 th:text="' 用户名:'+${user.username}"></h3>
+	<h3 th:text="' 用户ID'+${user.userId}"></h3>
+	<h3 th:text="' 用户名:'+${user.userName}"></h3>
 	<h3 th:text="' 余额:'+${user.money}"></h3>
 	</div>
 	<!-- 把表达式对应的值代替标签内的文本 -->
@@ -46,7 +46,7 @@
 					<tbody th:remove="all-but-first">
 						<tr th:each="pro : ${projects}">
 							<td><a class="btn btn-link" th:text="${pro.name}"
-								th:href="'/pro/back/projectDetails?id='+${pro.id}"></a></td>
+								th:href="'/pro/back/projectDetails?id='+${pro.projectId}"></a></td>
 							<td
 								th:text="${'￥' + #numbers.formatDecimal(pro.targetMoney, 1, 2)}">2</td>
 							<td th:text="${pro.createTime}">3</td>

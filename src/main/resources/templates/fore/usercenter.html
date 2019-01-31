@@ -278,7 +278,7 @@
 						</div>
 					</div>
 					<div class="col-md-4">
-						<div class="uc-header-content uc-header-num"  th:text = "${user.username}" >12</div>
+						<div class="uc-header-content uc-header-num"  th:text = "${user.userName}" >12</div>
 						<div>
 							<a id="uc-mymessage">我的消息</a>
 						</div>
@@ -289,7 +289,7 @@
 					<div class="uc-user-content">
 						<div class="uc-user-content-item">
 							<div class="uc-user-item-header">用户名：</div>
-							<div class="uc-user-item-content" th:text="${user.username}">#用户名</div>
+							<div class="uc-user-item-content" th:text="${user.userName}">#用户名</div>
 							<!-- 修改用户名 -->
 							<div class="uc-user-item-content">
 								<a href="JavaScript:void(0)" onclick="uc_openDialogResetname()">修改</a>
