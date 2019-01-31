@@ -88,6 +88,20 @@ public class ProjectServiceImpl implements ProjectService {
     }
 
     @Override
+    public void saveProAndUser(Order order){
+        ProAndUsers proAndUsers = new ProAndUsers();
+
+        proAndUsers.setUsername(order.getUser().getUserName());
+        proAndUsers.setUserId(order.getUser().getUserId());
+        proAndUsers.setDate(order.getDate());
+        proAndUsers.setMoney(order.getMoney());
+        proAndUsers.setPhone(order.getUser().getPhone());
+        proAndUsers.setProjectId(order.getProject().getProjectId());
+
+        proAndUsersRepository.save(proAndUsers);
+    }
+
+    @Override
     public void submitComment(Comment comment) {
         commentRepository.save(comment);
     }

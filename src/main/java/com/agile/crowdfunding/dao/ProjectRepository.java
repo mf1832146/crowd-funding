@@ -23,5 +23,8 @@ public interface ProjectRepository extends JpaRepository<Project,String> {
 
     List<Project> getProjectsByUserUserId(String userId);
 
+    List<Project> findFirst3ByType(Integer type);
+
+    List<Project> findByNameContainingAndTypeAndState(String name, int type, int state);
 
 }

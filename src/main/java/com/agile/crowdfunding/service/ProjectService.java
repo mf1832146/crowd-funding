@@ -33,4 +33,6 @@ public interface ProjectService {
     List<Project> searchProject(String keyWord, int type, int state, String order);
 
     String launchProject(Integer uid, ProjectInfoVo projectInfoVo);
+  
+    public void saveProAndUser(Order order);
 }
