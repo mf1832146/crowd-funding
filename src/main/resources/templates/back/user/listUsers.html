@@ -40,15 +40,15 @@
 					<!-- th:remove被处理时会被删除 -->
 					<tbody th:remove="all-but-first">
 						<tr th:each="user : ${users}">
-							<td ><a th:text="${user.username}" th:href="'/user/back/userDetails?id='+${user.id}"></a></td>
+							<td ><a th:text="${user.userName}" th:href="'/user/back/userDetails?id='+${user.userId}"></a></td>
 							<td th:text="${user.password}">2</td>
 							<td th:text="${'￥' + #numbers.formatDecimal(user.money, 1, 2)}">3</td>
 							<td th:text="${user.phone}">4</td>
 							<td th:text="${user.mail}">5</td>
 							<td align="center"><a class="btn btn-success"
-								th:href="'/user/back/editUser?id='+${user.id}">编辑</a> <a
+								th:href="'/user/back/editUser?id='+${user.userId}">编辑</a> <a
 								class="btn btn-danger"
-								th:href="'/user/back/deleteUser?id='+${user.id}">删除</a></td>
+								th:href="'/user/back/deleteUser?id='+${user.userId}">删除</a></td>
 						</tr>
 					</tbody>
 				</table>

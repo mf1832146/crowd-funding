@@ -8,6 +8,8 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 
 /**
  * Create by tang ze on 2019/1/23 20:30
@@ -22,5 +24,10 @@ public class TradeServiceImpl implements TradeService {
     @Override
     public void saveTrade(Trade trade) {
         tradeRepository.save(trade);
+    }
+
+    @Override
+    public List<Trade> getTrades(String id) {
+        return tradeRepository.getAllByUserUserId(id);
     }
 }

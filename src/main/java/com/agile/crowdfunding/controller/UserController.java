@@ -40,7 +40,7 @@ public class UserController {
         String id = (String) session.getAttribute("myId");
         User user = userService.getById(id);
         model.addAttribute("user", user);
-        return "/fore/user/myDetails";
+        return "fore/user/myDetails";
     }
 
     // 注意区别 这里是前台操作 查看其他用户信息，如：发起项目 ，他人参与的项目不公开
@@ -52,7 +52,7 @@ public class UserController {
         model.addAttribute("user", user);
         List<Project> projects = projectService.getProjectsByUserId(id);
         model.addAttribute("projects", projects);
-        return "/fore/user/userDetails";
+        return "fore/user/userDetails";
     }
 
     // 以上为前台管理
@@ -67,7 +67,7 @@ public class UserController {
         page.setTotal(userService.total());
         model.addAttribute("users", users);
         model.addAttribute("page", page);
-        return "/back/user/listUsers";
+        return "back/user/listUsers";
     }
 
     //删除用户
@@ -80,7 +80,7 @@ public class UserController {
     @RequestMapping("/back/editUser")
     public String editUser(Model model, String id) {
         model.addAttribute("fuckuser", userService.getById(id));
-        return "/back/user/editUser";
+        return "back/user/editUser";
     }
     //修改用户
     @RequestMapping("/back/updateUser")
@@ -97,7 +97,7 @@ public class UserController {
         model.addAttribute("projects", projects);
         List<UserAndSups> orders = orderService.getOrdersByUserId(id);
         model.addAttribute("orders", orders);
-        return "/back/user/userDetails";
+        return "back/user/userDetails";
     }
 
 }
