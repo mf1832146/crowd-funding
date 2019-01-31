@@ -7521,3 +7521,353 @@ org.thymeleaf.exceptions.TemplateProcessingException: Only variable expressions 
 	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_191]
 
 2019-01-31 23:00:02.696 ERROR 13824 --- [http-nio-8080-exec-1] s.e.ErrorMvcAutoConfiguration$StaticView : Cannot render error page for request [/fore/home] and exception [An error happened during template parsing (template: "class path resource [templates/fore/usercenter.html]")] as the response has already been committed. As a result, the response may have the wrong status code.
+2019-01-31 23:03:37.126  WARN 13824 --- [http-nio-8080-exec-5] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@6292b947 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2019-01-31 23:03:42.131  WARN 13824 --- [http-nio-8080-exec-5] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@37606110 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2019-01-31 23:03:44.281  WARN 13824 --- [http-nio-8080-exec-6] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@7852feaf (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2019-01-31 23:03:47.138  WARN 13824 --- [http-nio-8080-exec-5] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@477f54c7 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2019-01-31 23:03:49.288  WARN 13824 --- [http-nio-8080-exec-6] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@121e1cea (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2019-01-31 23:03:52.142  WARN 13824 --- [http-nio-8080-exec-5] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@67c69305 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2019-01-31 23:03:54.294  WARN 13824 --- [http-nio-8080-exec-6] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@30b82c2e (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2019-01-31 23:03:57.146  WARN 13824 --- [http-nio-8080-exec-5] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@539a060c (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2019-01-31 23:03:57.298  INFO 13824 --- [Thread-20] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2019-01-31 23:03:57.299  INFO 13824 --- [Thread-20] o.s.s.quartz.SchedulerFactoryBean        : Shutting down Quartz Scheduler
+2019-01-31 23:03:57.299  INFO 13824 --- [Thread-20] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2019-01-31 23:03:57.299  INFO 13824 --- [Thread-20] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2019-01-31 23:03:57.300  INFO 13824 --- [Thread-20] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+2019-01-31 23:03:57.311  INFO 13824 --- [Thread-20] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-01-31 23:03:57.313  INFO 13824 --- [Thread-20] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-01-31 23:03:57.315  INFO 13824 --- [Thread-20] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-01-31 23:03:59.298  WARN 13824 --- [http-nio-8080-exec-6] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@31ff5c49 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2019-01-31 23:04:06.228  INFO 13927 --- [restartedMain] c.a.c.CrowdFundingApplication            : Starting CrowdFundingApplication on sunhuayans-MacBook-Pro.local with PID 13927 (/Users/sunhuayan/github/crowd-funding/target/classes started by sunhuayan in /Users/sunhuayan/github/crowd-funding)
+2019-01-31 23:04:06.232  INFO 13927 --- [restartedMain] c.a.c.CrowdFundingApplication            : No active profile set, falling back to default profiles: default
+2019-01-31 23:04:06.280  INFO 13927 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-01-31 23:04:06.280  INFO 13927 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-01-31 23:04:07.128  INFO 13927 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-01-31 23:04:07.129  INFO 13927 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-01-31 23:04:07.223  INFO 13927 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 88ms. Found 10 repository interfaces.
+2019-01-31 23:04:07.237  INFO 13927 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-01-31 23:04:07.238  INFO 13927 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-01-31 23:04:07.254  INFO 13927 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.agile.crowdfunding.dao.CommentRepository.
+2019-01-31 23:04:07.255  INFO 13927 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.agile.crowdfunding.dao.ImageRepository.
+2019-01-31 23:04:07.256  INFO 13927 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.agile.crowdfunding.dao.MessageRepository.
+2019-01-31 23:04:07.256  INFO 13927 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.agile.crowdfunding.dao.OrderRepository.
+2019-01-31 23:04:07.257  INFO 13927 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.agile.crowdfunding.dao.ProAndUsersRepository.
+2019-01-31 23:04:07.258  INFO 13927 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.agile.crowdfunding.dao.ProjectDetailRepository.
+2019-01-31 23:04:07.258  INFO 13927 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.agile.crowdfunding.dao.ProjectRepository.
+2019-01-31 23:04:07.259  INFO 13927 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.agile.crowdfunding.dao.RewardRepository.
+2019-01-31 23:04:07.259  INFO 13927 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.agile.crowdfunding.dao.TradeRepository.
+2019-01-31 23:04:07.260  INFO 13927 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.agile.crowdfunding.dao.UserRepository.
+2019-01-31 23:04:07.260  INFO 13927 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 15ms. Found 0 repository interfaces.
+2019-01-31 23:04:07.703  INFO 13927 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$aa237666] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-01-31 23:04:08.059  INFO 13927 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-01-31 23:04:08.077  INFO 13927 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-01-31 23:04:08.077  INFO 13927 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.14]
+2019-01-31 23:04:08.083  INFO 13927 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/sunhuayan/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2019-01-31 23:04:08.152  INFO 13927 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-01-31 23:04:08.152  INFO 13927 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1872 ms
+2019-01-31 23:04:08.346  INFO 13927 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-01-31 23:04:08.633  INFO 13927 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-01-31 23:04:08.677  INFO 13927 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-01-31 23:04:08.721  INFO 13927 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.7.Final}
+2019-01-31 23:04:08.722  INFO 13927 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-01-31 23:04:08.811  INFO 13927 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-01-31 23:04:08.924  INFO 13927 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-01-31 23:04:09.084  WARN 13927 --- [restartedMain] org.hibernate.id.UUIDHexGenerator        : HHH000409: Using org.hibernate.id.UUIDHexGenerator which does not generate IETF RFC 4122 compliant UUID values; consider using org.hibernate.id.UUIDGenerator instead
+2019-01-31 23:04:09.618  INFO 13927 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-01-31 23:04:09.935  INFO 13927 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2019-01-31 23:04:10.147  INFO 13927 --- [restartedMain] f.a.AutowiredAnnotationBeanPostProcessor : Autowired annotation is not supported on static fields: static com.agile.crowdfunding.service.ProjectService com.agile.crowdfunding.util.MyAlipayUtils.projectService
+2019-01-31 23:04:10.332  INFO 13927 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-01-31 23:04:10.377  WARN 13927 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-01-31 23:04:10.468  WARN 13927 --- [restartedMain] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-01-31 23:04:10.493  INFO 13927 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-01-31 23:04:10.967  INFO 13927 --- [restartedMain] org.quartz.impl.StdSchedulerFactory      : Using default implementation for ThreadExecutor
+2019-01-31 23:04:10.976  INFO 13927 --- [restartedMain] org.quartz.core.SchedulerSignalerImpl    : Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2019-01-31 23:04:10.977  INFO 13927 --- [restartedMain] org.quartz.core.QuartzScheduler          : Quartz Scheduler v.2.3.0 created.
+2019-01-31 23:04:10.977  INFO 13927 --- [restartedMain] org.quartz.simpl.RAMJobStore             : RAMJobStore initialized.
+2019-01-31 23:04:10.978  INFO 13927 --- [restartedMain] org.quartz.core.QuartzScheduler          : Scheduler meta-data: Quartz Scheduler (v2.3.0) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2019-01-31 23:04:10.978  INFO 13927 --- [restartedMain] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2019-01-31 23:04:10.978  INFO 13927 --- [restartedMain] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler version: 2.3.0
+2019-01-31 23:04:10.978  INFO 13927 --- [restartedMain] org.quartz.core.QuartzScheduler          : JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@477961df
+2019-01-31 23:04:11.031  INFO 13927 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-01-31 23:04:11.058  INFO 13927 --- [restartedMain] o.s.s.quartz.SchedulerFactoryBean        : Starting Quartz Scheduler now
+2019-01-31 23:04:11.058  INFO 13927 --- [restartedMain] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2019-01-31 23:04:11.102  INFO 13927 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-01-31 23:04:11.105  INFO 13927 --- [restartedMain] c.a.c.CrowdFundingApplication            : Started CrowdFundingApplication in 5.2 seconds (JVM running for 5.868)
+2019-01-31 23:04:13.020  INFO 13927 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-01-31 23:04:13.021  INFO 13927 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-01-31 23:04:13.029  INFO 13927 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2019-01-31 23:06:47.174  INFO 13927 --- [Thread-20] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2019-01-31 23:06:47.180  INFO 13927 --- [Thread-20] o.s.s.quartz.SchedulerFactoryBean        : Shutting down Quartz Scheduler
+2019-01-31 23:06:47.181  INFO 13927 --- [Thread-20] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2019-01-31 23:06:47.181  INFO 13927 --- [Thread-20] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2019-01-31 23:06:47.181  INFO 13927 --- [Thread-20] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+2019-01-31 23:06:47.192  INFO 13927 --- [Thread-20] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-01-31 23:06:47.193  INFO 13927 --- [Thread-20] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-01-31 23:06:47.196  INFO 13927 --- [Thread-20] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-01-31 23:06:47.889  INFO 13927 --- [Thread-20] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-01-31 23:06:54.054  INFO 13957 --- [restartedMain] c.a.c.CrowdFundingApplication            : Starting CrowdFundingApplication on sunhuayans-MacBook-Pro.local with PID 13957 (/Users/sunhuayan/github/crowd-funding/target/classes started by sunhuayan in /Users/sunhuayan/github/crowd-funding)
+2019-01-31 23:06:54.057  INFO 13957 --- [restartedMain] c.a.c.CrowdFundingApplication            : No active profile set, falling back to default profiles: default
+2019-01-31 23:06:54.105  INFO 13957 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-01-31 23:06:54.105  INFO 13957 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-01-31 23:06:54.910  INFO 13957 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-01-31 23:06:54.910  INFO 13957 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-01-31 23:06:55.020  INFO 13957 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 104ms. Found 10 repository interfaces.
+2019-01-31 23:06:55.035  INFO 13957 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-01-31 23:06:55.036  INFO 13957 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-01-31 23:06:55.053  INFO 13957 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.agile.crowdfunding.dao.CommentRepository.
+2019-01-31 23:06:55.054  INFO 13957 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.agile.crowdfunding.dao.ImageRepository.
+2019-01-31 23:06:55.055  INFO 13957 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.agile.crowdfunding.dao.MessageRepository.
+2019-01-31 23:06:55.055  INFO 13957 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.agile.crowdfunding.dao.OrderRepository.
+2019-01-31 23:06:55.056  INFO 13957 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.agile.crowdfunding.dao.ProAndUsersRepository.
+2019-01-31 23:06:55.057  INFO 13957 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.agile.crowdfunding.dao.ProjectDetailRepository.
+2019-01-31 23:06:55.057  INFO 13957 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.agile.crowdfunding.dao.ProjectRepository.
+2019-01-31 23:06:55.058  INFO 13957 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.agile.crowdfunding.dao.RewardRepository.
+2019-01-31 23:06:55.058  INFO 13957 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.agile.crowdfunding.dao.TradeRepository.
+2019-01-31 23:06:55.059  INFO 13957 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.agile.crowdfunding.dao.UserRepository.
+2019-01-31 23:06:55.059  INFO 13957 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 16ms. Found 0 repository interfaces.
+2019-01-31 23:06:55.382  INFO 13957 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$cf9f9f77] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-01-31 23:06:55.755  INFO 13957 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-01-31 23:06:55.781  INFO 13957 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-01-31 23:06:55.781  INFO 13957 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.14]
+2019-01-31 23:06:55.789  INFO 13957 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/sunhuayan/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2019-01-31 23:06:55.898  INFO 13957 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-01-31 23:06:55.898  INFO 13957 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1793 ms
+2019-01-31 23:06:56.095  INFO 13957 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-01-31 23:06:57.529  INFO 13957 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-01-31 23:06:57.573  INFO 13957 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-01-31 23:06:57.617  INFO 13957 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.7.Final}
+2019-01-31 23:06:57.618  INFO 13957 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-01-31 23:06:57.706  INFO 13957 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-01-31 23:06:57.828  INFO 13957 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-01-31 23:06:57.975  WARN 13957 --- [restartedMain] org.hibernate.id.UUIDHexGenerator        : HHH000409: Using org.hibernate.id.UUIDHexGenerator which does not generate IETF RFC 4122 compliant UUID values; consider using org.hibernate.id.UUIDGenerator instead
+2019-01-31 23:06:58.403  INFO 13957 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-01-31 23:06:58.688  INFO 13957 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2019-01-31 23:06:58.962  INFO 13957 --- [restartedMain] f.a.AutowiredAnnotationBeanPostProcessor : Autowired annotation is not supported on static fields: static com.agile.crowdfunding.service.ProjectService com.agile.crowdfunding.util.MyAlipayUtils.projectService
+2019-01-31 23:06:59.149  INFO 13957 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-01-31 23:06:59.189  WARN 13957 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-01-31 23:06:59.277  WARN 13957 --- [restartedMain] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-01-31 23:06:59.331  INFO 13957 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-01-31 23:07:00.058  INFO 13957 --- [restartedMain] org.quartz.impl.StdSchedulerFactory      : Using default implementation for ThreadExecutor
+2019-01-31 23:07:00.068  INFO 13957 --- [restartedMain] org.quartz.core.SchedulerSignalerImpl    : Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2019-01-31 23:07:00.068  INFO 13957 --- [restartedMain] org.quartz.core.QuartzScheduler          : Quartz Scheduler v.2.3.0 created.
+2019-01-31 23:07:00.069  INFO 13957 --- [restartedMain] org.quartz.simpl.RAMJobStore             : RAMJobStore initialized.
+2019-01-31 23:07:00.069  INFO 13957 --- [restartedMain] org.quartz.core.QuartzScheduler          : Scheduler meta-data: Quartz Scheduler (v2.3.0) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2019-01-31 23:07:00.069  INFO 13957 --- [restartedMain] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2019-01-31 23:07:00.070  INFO 13957 --- [restartedMain] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler version: 2.3.0
+2019-01-31 23:07:00.070  INFO 13957 --- [restartedMain] org.quartz.core.QuartzScheduler          : JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@1e8f3a7a
+2019-01-31 23:07:00.125  INFO 13957 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-01-31 23:07:00.152  INFO 13957 --- [restartedMain] o.s.s.quartz.SchedulerFactoryBean        : Starting Quartz Scheduler now
+2019-01-31 23:07:00.152  INFO 13957 --- [restartedMain] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2019-01-31 23:07:00.199  INFO 13957 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-01-31 23:07:00.202  INFO 13957 --- [restartedMain] c.a.c.CrowdFundingApplication            : Started CrowdFundingApplication in 6.53 seconds (JVM running for 7.348)
+2019-01-31 23:07:03.235  INFO 13957 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-01-31 23:07:03.235  INFO 13957 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-01-31 23:07:03.242  INFO 13957 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2019-01-31 23:20:46.740  INFO 13957 --- [Thread-22] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2019-01-31 23:20:46.747  INFO 13957 --- [Thread-22] o.s.s.quartz.SchedulerFactoryBean        : Shutting down Quartz Scheduler
+2019-01-31 23:20:46.747  INFO 13957 --- [Thread-22] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2019-01-31 23:20:46.747  INFO 13957 --- [Thread-22] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2019-01-31 23:20:46.748  INFO 13957 --- [Thread-22] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+2019-01-31 23:20:46.758  INFO 13957 --- [Thread-22] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-01-31 23:20:46.760  INFO 13957 --- [Thread-22] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-01-31 23:20:46.763  INFO 13957 --- [Thread-22] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-01-31 23:20:46.769  INFO 13957 --- [Thread-22] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-01-31 23:21:11.073  INFO 14030 --- [restartedMain] c.a.c.CrowdFundingApplication            : Starting CrowdFundingApplication on sunhuayans-MacBook-Pro.local with PID 14030 (/Users/sunhuayan/github/crowd-funding/target/classes started by sunhuayan in /Users/sunhuayan/github/crowd-funding)
+2019-01-31 23:21:11.077  INFO 14030 --- [restartedMain] c.a.c.CrowdFundingApplication            : No active profile set, falling back to default profiles: default
+2019-01-31 23:21:11.126  INFO 14030 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-01-31 23:21:11.126  INFO 14030 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-01-31 23:21:12.030  INFO 14030 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-01-31 23:21:12.031  INFO 14030 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-01-31 23:21:12.128  INFO 14030 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 92ms. Found 10 repository interfaces.
+2019-01-31 23:21:12.143  INFO 14030 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-01-31 23:21:12.144  INFO 14030 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-01-31 23:21:12.161  INFO 14030 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.agile.crowdfunding.dao.CommentRepository.
+2019-01-31 23:21:12.161  INFO 14030 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.agile.crowdfunding.dao.ImageRepository.
+2019-01-31 23:21:12.162  INFO 14030 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.agile.crowdfunding.dao.MessageRepository.
+2019-01-31 23:21:12.162  INFO 14030 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.agile.crowdfunding.dao.OrderRepository.
+2019-01-31 23:21:12.162  INFO 14030 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.agile.crowdfunding.dao.ProAndUsersRepository.
+2019-01-31 23:21:12.163  INFO 14030 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.agile.crowdfunding.dao.ProjectDetailRepository.
+2019-01-31 23:21:12.164  INFO 14030 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.agile.crowdfunding.dao.ProjectRepository.
+2019-01-31 23:21:12.164  INFO 14030 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.agile.crowdfunding.dao.RewardRepository.
+2019-01-31 23:21:12.165  INFO 14030 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.agile.crowdfunding.dao.TradeRepository.
+2019-01-31 23:21:12.165  INFO 14030 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.agile.crowdfunding.dao.UserRepository.
+2019-01-31 23:21:12.165  INFO 14030 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 13ms. Found 0 repository interfaces.
+2019-01-31 23:21:12.510  INFO 14030 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$bf099c50] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-01-31 23:21:12.894  INFO 14030 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-01-31 23:21:12.917  INFO 14030 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-01-31 23:21:12.917  INFO 14030 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.14]
+2019-01-31 23:21:12.924  INFO 14030 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/sunhuayan/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2019-01-31 23:21:13.020  INFO 14030 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-01-31 23:21:13.020  INFO 14030 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1894 ms
+2019-01-31 23:21:13.208  INFO 14030 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-01-31 23:21:13.494  INFO 14030 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-01-31 23:21:13.538  INFO 14030 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-01-31 23:21:13.583  INFO 14030 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.7.Final}
+2019-01-31 23:21:13.584  INFO 14030 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-01-31 23:21:13.674  INFO 14030 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-01-31 23:21:13.788  INFO 14030 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-01-31 23:21:13.930  WARN 14030 --- [restartedMain] org.hibernate.id.UUIDHexGenerator        : HHH000409: Using org.hibernate.id.UUIDHexGenerator which does not generate IETF RFC 4122 compliant UUID values; consider using org.hibernate.id.UUIDGenerator instead
+2019-01-31 23:21:14.348  INFO 14030 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-01-31 23:21:14.642  INFO 14030 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2019-01-31 23:21:14.905  INFO 14030 --- [restartedMain] f.a.AutowiredAnnotationBeanPostProcessor : Autowired annotation is not supported on static fields: static com.agile.crowdfunding.service.ProjectService com.agile.crowdfunding.util.MyAlipayUtils.projectService
+2019-01-31 23:21:15.124  INFO 14030 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-01-31 23:21:15.163  WARN 14030 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-01-31 23:21:15.191  WARN 14030 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'searchController' method 
+public java.lang.String com.agile.crowdfunding.controller.SearchController.searchType(javax.servlet.http.HttpSession,java.lang.String,org.springframework.ui.Model)
+to { /search/searchType}: There is already 'projectController' bean method
+public java.lang.String com.agile.crowdfunding.controller.ProjectController.searchType(javax.servlet.http.HttpSession,java.lang.String,org.springframework.ui.Model) mapped.
+2019-01-31 23:21:15.191  INFO 14030 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-01-31 23:21:15.193  INFO 14030 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-01-31 23:21:15.195  INFO 14030 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-01-31 23:21:15.893  INFO 14030 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-01-31 23:21:15.895  INFO 14030 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2019-01-31 23:21:15.906  INFO 14030 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-01-31 23:21:15.916 ERROR 14030 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'searchController' method 
+public java.lang.String com.agile.crowdfunding.controller.SearchController.searchType(javax.servlet.http.HttpSession,java.lang.String,org.springframework.ui.Model)
+to { /search/searchType}: There is already 'projectController' bean method
+public java.lang.String com.agile.crowdfunding.controller.ProjectController.searchType(javax.servlet.http.HttpSession,java.lang.String,org.springframework.ui.Model) mapped.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1745) ~[spring-beans-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:576) ~[spring-beans-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:498) ~[spring-beans-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320) ~[spring-beans-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318) ~[spring-beans-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:846) ~[spring-beans-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:863) ~[spring-context-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:546) ~[spring-context-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:142) ~[spring-boot-2.1.2.RELEASE.jar:2.1.2.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775) [spring-boot-2.1.2.RELEASE.jar:2.1.2.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) [spring-boot-2.1.2.RELEASE.jar:2.1.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316) [spring-boot-2.1.2.RELEASE.jar:2.1.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260) [spring-boot-2.1.2.RELEASE.jar:2.1.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248) [spring-boot-2.1.2.RELEASE.jar:2.1.2.RELEASE]
+	at com.agile.crowdfunding.CrowdFundingApplication.main(CrowdFundingApplication.java:11) [classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_191]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_191]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_191]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_191]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) [spring-boot-devtools-2.1.2.RELEASE.jar:2.1.2.RELEASE]
+Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'searchController' method 
+public java.lang.String com.agile.crowdfunding.controller.SearchController.searchType(javax.servlet.http.HttpSession,java.lang.String,org.springframework.ui.Model)
+to { /search/searchType}: There is already 'projectController' bean method
+public java.lang.String com.agile.crowdfunding.controller.ProjectController.searchType(javax.servlet.http.HttpSession,java.lang.String,org.springframework.ui.Model) mapped.
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.assertUniqueMethodMapping(AbstractHandlerMethodMapping.java:621) ~[spring-webmvc-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:589) ~[spring-webmvc-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:315) ~[spring-webmvc-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lambda$detectHandlerMethods$1(AbstractHandlerMethodMapping.java:282) ~[spring-webmvc-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at java.util.LinkedHashMap.forEach(LinkedHashMap.java:684) ~[na:1.8.0_191]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:280) ~[spring-webmvc-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.processCandidateBean(AbstractHandlerMethodMapping.java:252) ~[spring-webmvc-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:211) ~[spring-webmvc-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:199) ~[spring-webmvc-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:164) ~[spring-webmvc-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1804) ~[spring-beans-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1741) ~[spring-beans-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	... 21 common frames omitted
+
+2019-01-31 23:22:49.610  INFO 14043 --- [restartedMain] c.a.c.CrowdFundingApplication            : Starting CrowdFundingApplication on sunhuayans-MacBook-Pro.local with PID 14043 (/Users/sunhuayan/github/crowd-funding/target/classes started by sunhuayan in /Users/sunhuayan/github/crowd-funding)
+2019-01-31 23:22:49.614  INFO 14043 --- [restartedMain] c.a.c.CrowdFundingApplication            : No active profile set, falling back to default profiles: default
+2019-01-31 23:22:49.661  INFO 14043 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-01-31 23:22:49.662  INFO 14043 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-01-31 23:22:50.543  INFO 14043 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-01-31 23:22:50.544  INFO 14043 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-01-31 23:22:50.632  INFO 14043 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 82ms. Found 10 repository interfaces.
+2019-01-31 23:22:50.644  INFO 14043 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-01-31 23:22:50.645  INFO 14043 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-01-31 23:22:50.658  INFO 14043 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.agile.crowdfunding.dao.CommentRepository.
+2019-01-31 23:22:50.659  INFO 14043 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.agile.crowdfunding.dao.ImageRepository.
+2019-01-31 23:22:50.659  INFO 14043 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.agile.crowdfunding.dao.MessageRepository.
+2019-01-31 23:22:50.660  INFO 14043 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.agile.crowdfunding.dao.OrderRepository.
+2019-01-31 23:22:50.660  INFO 14043 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.agile.crowdfunding.dao.ProAndUsersRepository.
+2019-01-31 23:22:50.660  INFO 14043 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.agile.crowdfunding.dao.ProjectDetailRepository.
+2019-01-31 23:22:50.661  INFO 14043 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.agile.crowdfunding.dao.ProjectRepository.
+2019-01-31 23:22:50.661  INFO 14043 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.agile.crowdfunding.dao.RewardRepository.
+2019-01-31 23:22:50.661  INFO 14043 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.agile.crowdfunding.dao.TradeRepository.
+2019-01-31 23:22:50.662  INFO 14043 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.agile.crowdfunding.dao.UserRepository.
+2019-01-31 23:22:50.662  INFO 14043 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 11ms. Found 0 repository interfaces.
+2019-01-31 23:22:51.001  INFO 14043 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$8b7b265f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-01-31 23:22:51.342  INFO 14043 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-01-31 23:22:51.366  INFO 14043 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-01-31 23:22:51.366  INFO 14043 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.14]
+2019-01-31 23:22:51.372  INFO 14043 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/sunhuayan/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2019-01-31 23:22:51.461  INFO 14043 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-01-31 23:22:51.461  INFO 14043 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1799 ms
+2019-01-31 23:22:51.650  INFO 14043 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-01-31 23:22:51.945  INFO 14043 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-01-31 23:22:51.989  INFO 14043 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-01-31 23:22:52.039  INFO 14043 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.7.Final}
+2019-01-31 23:22:52.040  INFO 14043 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-01-31 23:22:52.137  INFO 14043 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-01-31 23:22:52.255  INFO 14043 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-01-31 23:22:52.416  WARN 14043 --- [restartedMain] org.hibernate.id.UUIDHexGenerator        : HHH000409: Using org.hibernate.id.UUIDHexGenerator which does not generate IETF RFC 4122 compliant UUID values; consider using org.hibernate.id.UUIDGenerator instead
+2019-01-31 23:22:52.912  INFO 14043 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-01-31 23:22:53.261  INFO 14043 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2019-01-31 23:22:53.570  INFO 14043 --- [restartedMain] f.a.AutowiredAnnotationBeanPostProcessor : Autowired annotation is not supported on static fields: static com.agile.crowdfunding.service.ProjectService com.agile.crowdfunding.util.MyAlipayUtils.projectService
+2019-01-31 23:22:53.790  INFO 14043 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-01-31 23:22:53.831  WARN 14043 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-01-31 23:22:53.922  WARN 14043 --- [restartedMain] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-01-31 23:22:53.949  INFO 14043 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-01-31 23:22:54.462  INFO 14043 --- [restartedMain] org.quartz.impl.StdSchedulerFactory      : Using default implementation for ThreadExecutor
+2019-01-31 23:22:54.471  INFO 14043 --- [restartedMain] org.quartz.core.SchedulerSignalerImpl    : Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2019-01-31 23:22:54.472  INFO 14043 --- [restartedMain] org.quartz.core.QuartzScheduler          : Quartz Scheduler v.2.3.0 created.
+2019-01-31 23:22:54.472  INFO 14043 --- [restartedMain] org.quartz.simpl.RAMJobStore             : RAMJobStore initialized.
+2019-01-31 23:22:54.473  INFO 14043 --- [restartedMain] org.quartz.core.QuartzScheduler          : Scheduler meta-data: Quartz Scheduler (v2.3.0) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2019-01-31 23:22:54.473  INFO 14043 --- [restartedMain] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2019-01-31 23:22:54.473  INFO 14043 --- [restartedMain] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler version: 2.3.0
+2019-01-31 23:22:54.474  INFO 14043 --- [restartedMain] org.quartz.core.QuartzScheduler          : JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@a869713
+2019-01-31 23:22:54.528  INFO 14043 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-01-31 23:22:54.553  INFO 14043 --- [restartedMain] o.s.s.quartz.SchedulerFactoryBean        : Starting Quartz Scheduler now
+2019-01-31 23:22:54.554  INFO 14043 --- [restartedMain] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2019-01-31 23:22:54.597  INFO 14043 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-01-31 23:22:54.600  INFO 14043 --- [restartedMain] c.a.c.CrowdFundingApplication            : Started CrowdFundingApplication in 5.316 seconds (JVM running for 5.884)
+2019-01-31 23:23:01.372  INFO 14043 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-01-31 23:23:01.373  INFO 14043 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-01-31 23:23:01.381  INFO 14043 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2019-01-31 23:23:07.406  INFO 14043 --- [http-nio-8080-exec-4] c.a.c.controller.LoginController         : LoginVo [username=sun, password=123]
+2019-01-31 23:23:19.269  INFO 14043 --- [http-nio-8080-exec-4] c.a.c.controller.SearchController        : [keyWord:支教,searchType:1,searchState:0,searchOrder0]
+2019-01-31 23:23:28.270  INFO 14043 --- [http-nio-8080-exec-8] c.a.c.controller.SearchController        : [keyWord:孩,searchType:1,searchState:0,searchOrder0]
+2019-01-31 23:23:46.047  INFO 14043 --- [http-nio-8080-exec-4] c.a.c.controller.SearchController        : [keyWord:,searchType:2,searchState:0,searchOrder0]
+2019-01-31 23:23:49.694  INFO 14043 --- [http-nio-8080-exec-8] c.a.c.controller.SearchController        : [keyWord:,searchType:0,searchState:0,searchOrder0]
+2019-01-31 23:23:56.319  INFO 14043 --- [Thread-20] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2019-01-31 23:23:56.320  INFO 14043 --- [Thread-20] o.s.s.quartz.SchedulerFactoryBean        : Shutting down Quartz Scheduler
+2019-01-31 23:23:56.320  INFO 14043 --- [Thread-20] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2019-01-31 23:23:56.321  INFO 14043 --- [Thread-20] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2019-01-31 23:23:56.321  INFO 14043 --- [Thread-20] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+2019-01-31 23:23:56.333  INFO 14043 --- [Thread-20] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-01-31 23:23:56.335  INFO 14043 --- [Thread-20] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-01-31 23:23:56.337  INFO 14043 --- [Thread-20] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-01-31 23:24:02.924  INFO 14043 --- [Thread-20] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

@@ -127,26 +127,6 @@ public class ProjectController {
         return "success";
     }
 
-    @RequestMapping("/search/searchType")
-    @ResponseBody
-    public String searchType(HttpSession session, String type, Model model) {
-        setLoginMessage(session,model);
-
-        SearchVo searchVo = new SearchVo();
-        searchVo.setKeyWord("");
-        searchVo.setSearchOrder("0");
-        searchVo.setSearchState("0");
-        searchVo.setSearchType(type);
-
-        //调用ProjectService进行检索
-        List<Project> list = projectService.searchProject(searchVo.getKeyWord(),
-                Integer.parseInt(searchVo.getSearchType()), Integer.parseInt(searchVo.getSearchState()),
-                searchVo.getSearchOrder());
-        model.addAttribute("projects", list);
-        model.addAttribute("init", searchVo);
-
-        return "fore/search";
-    }
 
     // 前台管理操作开始
 
