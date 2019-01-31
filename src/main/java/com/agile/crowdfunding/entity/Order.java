@@ -1,10 +1,11 @@
 package com.agile.crowdfunding.entity;
 
+import com.sun.tools.corba.se.idl.constExpr.Times;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
 import java.io.Serializable;
-import java.util.Date;
+import java.sql.Date;
 
 /**
  * Create by tang ze on 2019/1/21 15:43
@@ -40,7 +41,7 @@ public class Order implements Serializable {
 
     //订单状态
     @Column
-    private Integer state;
+    private Integer state = 0;
 
     //订单时间
     @Column
