@@ -1,5 +1,6 @@
 package com.agile.crowdfunding.controller;
 
+import com.agile.crowdfunding.entity.Order;
 import com.agile.crowdfunding.entity.Trade;
 import com.agile.crowdfunding.entity.User;
 import com.agile.crowdfunding.service.*;
@@ -69,12 +70,14 @@ public class PayController {
         trade.setUser(user);
         tradeService.saveTrade(trade);
 
-        Double money = orderService.getOrderByOrderId(out_trade_no).getMoney();
+        Order order = orderService.getOrderByOrderId(out_trade_no);
+        Double money = order.getMoney();
         String projectId = orderService.getOrderByOrderId(out_trade_no).getProject().getProjectId();
         String info = "【支付宝付】关于项目【" + projectService.getProject(projectId).getName() + "】，" + money + "元";
 
         messageService.sendMessageToSponstor(userId, info );
 
+        projectService.saveProAndUser(order);
 
         if(projectService.getProject(projectId).getCurrentMoney() > projectService.getProject(projectId).getTargetMoney()) {
             projectService.updateState(projectId, 31);

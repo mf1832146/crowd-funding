@@ -45,7 +45,7 @@ public class LoginController {
 
         // 实现了当在某个页面点击登录按钮，登录完成之后跳转回原来的页面//
         if (session.getAttribute("preProject") != null) {
-            int projID = (Integer) session.getAttribute("preProject");
+            String projID = (String) session.getAttribute("preProject");
             return Result.success(String.valueOf(projID));
         }
 

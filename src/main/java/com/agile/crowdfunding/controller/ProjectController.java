@@ -67,31 +67,31 @@ public class ProjectController {
     }
 
     @RequestMapping("/detail/showDetail")
-    public String showDetail(Integer projID, Model model, HttpSession session) {
+    public String showDetail(String projID, Model model, HttpSession session) {
         if (projID == null) {
-            projID = (Integer) session.getAttribute("preProject");
+            projID = (String) session.getAttribute("preProject");
         }
         session.setAttribute("preProject", projID);
 
         setLoginMessage(session,model);
 
         //获取项目信息
-        Project project = projectService.getProject(projID.toString());
-        System.out.println(project.toString());
+        Project project = projectService.getProject(projID);
+        //System.out.println(project.toString());
         //获取项目详细信息
-        ProjectDetail projectDetail = projectService.getProjectDetail(projID.toString());
+        ProjectDetail projectDetail = projectService.getProjectDetail(projID);
         System.out.println(projectDetail.toString());
         //获取回报信息
-        Reward reward = projectService.getReward(projID.toString());
+        Reward reward = projectService.getReward(projID);
         System.out.println(reward.toString());
         //获取评论信息
-        List<Comment> comments = projectService.getComment(projID.toString());
+        List<Comment> comments = projectService.getComment(projID);
         System.out.println(comments.toString());
         //获取支持信息
-        List<ProAndUsers> proAndUsers = projectService.getProAndUsers(projID.toString());
-        System.out.println(proAndUsers.toString());
+        List<ProAndUsers> proAndUsers = projectService.getProAndUsers(projID);
+        System.out.println(proAndUsers);
         //获取图片信息
-        List<Image> images = projectService.getImages(projID.toString());
+        List<Image> images = projectService.getImages(projID);
         System.out.println(images.toString());
 
         model.addAttribute("project", project);

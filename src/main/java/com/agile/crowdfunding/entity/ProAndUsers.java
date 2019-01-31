@@ -24,7 +24,7 @@ public class ProAndUsers implements Serializable {
     @Column
     private String projectId;
     @Column
-    private Integer money;
+    private Double money;
     @Column
     private Date date;
     @Column
@@ -66,11 +66,11 @@ public class ProAndUsers implements Serializable {
         this.projectId = projectId;
     }
 
-    public Integer getMoney() {
+    public Double getMoney() {
         return money;
     }
 
-    public void setMoney(Integer money) {
+    public void setMoney(Double money) {
         this.money = money;
     }
 

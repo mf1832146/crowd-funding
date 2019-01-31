@@ -1,6 +1,8 @@
 package com.agile.crowdfunding.dao;
 
 import com.agile.crowdfunding.entity.Order;
+import com.agile.crowdfunding.entity.Project;
+import com.agile.crowdfunding.entity.User;
 import com.agile.crowdfunding.service.OrderService;
 import com.agile.crowdfunding.service.ProjectService;
 import com.agile.crowdfunding.service.UserService;
@@ -110,6 +112,19 @@ public class OrderRepositoryTest {
         for (int i = 0; i < orderList.size(); i++){
             orderRepository.deleteOrderByOrderId(orderList.get(i).getOrderId());
         }
+    }
+
+    @Test
+    public void testSave(){
+        Order order = new Order();
+        order.setOrderName("test");
+        Project project = projectService.getProject("1");
+        User user = userService.getById("2c93f9fd686a4bd001686a4be4240000");
+
+        order.setProject(project);
+        order.setUser(user);
+        orderRepository.save(order);
+        System.out.println(order.getOrderId());
     }
 }
 

@@ -74,11 +74,8 @@ public class AlipayServiceImpl implements  AlipayService{
         orderId += RandomUtils.getRandomLetterAndNum(7);
         order.setOrderId(orderId);
 
-        // 时间默认当前
-        order.setDate(new java.sql.Date(new java.util.Date().getTime()));
-
         // 插入订单
-        //orderService.insertOrder(order);
+        orderService.insertOrder(order);
 
         // 调用工具类发送请求 返回请求结果
         String result = null;
@@ -161,13 +158,13 @@ public class AlipayServiceImpl implements  AlipayService{
         Project project = projectService.getProject(projectId);
         order.setProject(project);
         order.setMoney(money);
-        SimpleDateFormat df = new SimpleDateFormat("yyyyMMddHHmmssSSS");// 设置日期格式
-        String orderId = df.format(new java.util.Date());
-        orderId += RandomUtils.getRandomLetterAndNum(7);
-        order.setOrderId(orderId);
+        //SimpleDateFormat df = new SimpleDateFormat("yyyyMMddHHmmssSSS");// 设置日期格式
+        //String orderId = df.format(new java.util.Date());
+        //orderId += RandomUtils.getRandomLetterAndNum(7);
+        //order.setOrderId(orderId);
 
         // 时间默认当前
-        order.setDate(new java.sql.Date(new java.util.Date().getTime()));
+        //order.setDate(new java.sql.Date(new java.util.Date().getTime()));
 
         // 插入订单
         orderService.saveOrder(order);
@@ -205,10 +202,6 @@ public class AlipayServiceImpl implements  AlipayService{
         String orderId = df.format(new java.util.Date());
         orderId += RandomUtils.getRandomLetterAndNum(7);
         order.setOrderId(orderId);
-
-        // 时间默认当前
-        order.setDate(new java.sql.Date(new java.util.Date().getTime()));
-
         // 插入订单
         orderService.saveOrder(order);
         orderService.updateState(orderId);

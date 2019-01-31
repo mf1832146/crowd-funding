@@ -30,4 +30,6 @@ public interface ProjectService {
     List<Project> getProjectByType(Integer type);
 
     List<Project> searchProject(String keyWord, int type, int state, String order);
+
+    public void saveProAndUser(Order order);
 }

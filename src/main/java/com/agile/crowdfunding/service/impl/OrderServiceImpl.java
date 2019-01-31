@@ -65,7 +65,7 @@ public class OrderServiceImpl implements OrderService {
 
     @Override
     public void updateState(String orderId) {
-        //orderRepository.updateStateByOrderId(orderId);
+        orderRepository.updateStateByOrderId(orderId);
     }
 
     @Override
@@ -80,6 +80,7 @@ public class OrderServiceImpl implements OrderService {
 
     @Override
     public void saveOrder(Order order) {
+        logger.info("保存订单信息");
         orderRepository.save(order);
     }
 
