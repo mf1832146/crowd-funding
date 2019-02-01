@@ -7,9 +7,8 @@
 <script type="text/javascript" th:src="@{/js/jquery.min.js}"></script>
 <!-- bootstrap -->
 <link rel="stylesheet" type="text/css"
-	th:href="@{/bootstrap/css/bootstrap.min.css}" />
-<script type="text/javascript"
-	th:src="@{/bootstrap/js/bootstrap.min.js}"></script>
+		  th:href="@{/css/bootstrap.min.css}" />
+<script type="text/javascript" th:src="@{/js/bootstrap.min.js}"></script>
 <!-- jquery-validator -->
 <script type="text/javascript"
 	th:src="@{/jquery-validation/jquery.validate.min.js}"></script>
@@ -53,7 +52,7 @@
 							<td
 								th:text="${'￥' + #numbers.formatDecimal(pro.currentMoney, 1, 2)}">3</td>
 							<td align="center"><a class="btn btn-success"
-								th:href="'/pro/back/updateState?id='+${pro.projectId}+'&amp;state=99'">锁定</a>
+								th:href="'/pro/updateState?id='+${pro.projectId}+'&amp;state=99'">锁定</a>
 								<a class="btn btn-danger">删除</a></td>
 						</tr>
 					</tbody>
