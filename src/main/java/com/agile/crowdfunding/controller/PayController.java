@@ -46,7 +46,7 @@ public class PayController {
     //去支付页面
     @RequestMapping("/toPay")
     public String toPay() {
-        return "/fore/pay/pay";
+        return "fore/pay/pay";
     }
 
     //支付成功返回处理
@@ -99,7 +99,7 @@ public class PayController {
         if(uc_payChoice.equals("1")) {
             String result = alipayService.orderRequest(orderId);
             model.addAttribute("result", result);
-            return "/fore/pay/alipay";
+            return "fore/pay/alipay";
         }
         if(uc_payChoice.equals("2")) {
 
@@ -128,7 +128,7 @@ public class PayController {
         if(orderType == 1) {
             String result = alipayService.newOrderByAlipay(userId, money, projectId);
             model.addAttribute("result", result);
-            return "/fore/pay/alipay";
+            return "fore/pay/alipay";
         }
         if(orderType == 2) {
             return "redirect:/detail/showDetail?"+ projectId;
