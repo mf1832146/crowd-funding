@@ -65,9 +65,9 @@
 											<p th:text="'锁定中'" th:if="${pro.state} == 99 or ${pro.state} ==80"></p>
 							</td>
 							<td align="center"><a class="btn btn-success"
-								th:href="'/pro/back/updateState?id='+${pro.projectId}+'&amp;state=99'">锁定</a>
+								th:href="'/pro/updateState?id='+${pro.projectId}+'&amp;state=99'">锁定</a>
 								<a class="btn btn-danger"
-								th:href="'/pro/back/deletePro?id='+${pro.projectId}">撤销</a>
+								th:href="'/pro/deletePro?id='+${pro.projectId}">撤销</a>
 							</td>
 						</tr>
 					</tbody>

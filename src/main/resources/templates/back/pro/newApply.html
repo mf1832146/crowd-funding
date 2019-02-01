@@ -6,8 +6,8 @@
 <!-- jquery -->
 <script type="text/javascript" th:src="@{/js/jquery.min.js}"></script>
 <!-- bootstrap -->
-<link rel="stylesheet" type="text/css"
-	th:href="@{/bootstrap/css/bootstrap.min.css}" />
+	<link rel="stylesheet" type="text/css"
+		  th:href="@{/css/bootstrap.min.css}" />
 <script type="text/javascript"
 	th:src="@{/bootstrap/js/bootstrap.min.js}"></script>
 <!-- jquery-validator -->
@@ -50,8 +50,8 @@ vertical-align: middle!important;
 							<td th:text="${pro.createTime}">3</td>
 							<td th:text="${pro.endTime}">3</td>
  							<td align="center">  
-							  	<a class="btn btn-success" th:href="'/pro/back/updateState?id='+${pro.projectId}+'&amp;state=21'">通过</a>
-							  	<a class="btn btn-danger"  th:href="'/pro/back/updateState?id='+${pro.projectId}+'&amp;state=20'">拒绝</a>
+							  	<a class="btn btn-success" th:href="'/pro/updateState?id='+${pro.projectId}+'&amp;state=21'">通过</a>
+							  	<a class="btn btn-danger"  th:href="'/pro/updateState?id='+${pro.projectId}+'&amp;state=20'">拒绝</a>
  							</td>
 
 						</tr>
