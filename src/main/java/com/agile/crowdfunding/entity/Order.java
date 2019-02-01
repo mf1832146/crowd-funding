@@ -1,6 +1,5 @@
 package com.agile.crowdfunding.entity;
 
-import com.sun.tools.corba.se.idl.constExpr.Times;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
