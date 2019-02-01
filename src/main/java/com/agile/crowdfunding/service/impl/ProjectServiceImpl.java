@@ -5,6 +5,7 @@ import com.agile.crowdfunding.entity.*;
 import com.agile.crowdfunding.exception.GlobalException;
 import com.agile.crowdfunding.result.CodeMsg;
 import com.agile.crowdfunding.service.ProjectService;
+import com.agile.crowdfunding.util.Page;
 import com.agile.crowdfunding.vo.ProjectInfoVo;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -99,6 +100,21 @@ public class ProjectServiceImpl implements ProjectService {
         proAndUsers.setProjectId(order.getProject().getProjectId());
 
         proAndUsersRepository.save(proAndUsers);
+    }
+
+    @Override
+    public List<Project> listAllProjects(Page page) {
+        return projectRepository.listProjects(page.getStart(),page.getCount());
+    }
+
+    @Override
+    public Integer total() {
+        return projectRepository.findAll().size();
+    }
+
+    @Override
+    public List<Project> getProjectsByState(Integer state) {
+        return projectRepository.getProjectsByState(state);
     }
 
     @Override

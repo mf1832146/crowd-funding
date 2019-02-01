@@ -1,8 +1,9 @@
 package com.agile.crowdfunding.controller;
 
 import com.agile.crowdfunding.entity.*;
-import com.agile.crowdfunding.service.MessageService;
-import com.agile.crowdfunding.service.ProjectService;
+import com.agile.crowdfunding.service.*;
+import com.agile.crowdfunding.util.AuthorizationUtils;
+import com.agile.crowdfunding.util.Page;
 import com.agile.crowdfunding.vo.LoginVo;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -12,6 +13,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.sql.Timestamp;
@@ -25,7 +27,19 @@ public class ProjectController {
     ProjectService projectService;
 
     @Autowired
-    private MessageService messageService;
+    MessageService messageService;
+
+    @Autowired
+    OrderService orderService;
+
+    @Autowired
+    UserService userService;
+
+    @Autowired
+    TradeService tradeService;
+
+    @Autowired
+    AuthorizationUtils auth;
 
     public void setLoginMessage(HttpSession session,Model model){
         LoginVo loginVo = (LoginVo) session.getAttribute("loginVo");
@@ -113,24 +127,144 @@ public class ProjectController {
         return "success";
     }
 
-    @RequestMapping("/search/searchType")
-    @ResponseBody
-    public String searchType(HttpSession session, String type, Model model) {
-        setLoginMessage(session,model);
 
-        SearchVo searchVo = new SearchVo();
-        searchVo.setKeyWord("");
-        searchVo.setSearchOrder("0");
-        searchVo.setSearchState("0");
-        searchVo.setSearchType(type);
+    // 前台管理操作开始
 
-        //调用ProjectService进行检索
-        List<Project> list = projectService.searchProject(searchVo.getKeyWord(),
-                Integer.parseInt(searchVo.getSearchType()), Integer.parseInt(searchVo.getSearchState()),
-                searchVo.getSearchOrder());
+    @RequestMapping("/pro/fore/updateState")
+    public String updateForeState(Model model, String id, Integer state, HttpSession session,
+                                  HttpServletRequest request) {
+        if (!auth.check(session))
+            return "redirect:/login/toLogin";
+        projectService.updateState(id, state);
+        messageService.sendMessage(id, state);
+
+        Integer type = Integer.parseInt(request.getParameter("type"));
+        String uid = (String) session.getAttribute("myId");
+        List<Project> list = projectService.getProjectsByUserId(uid);
         model.addAttribute("projects", list);
-        model.addAttribute("init", searchVo);
+        return "fore/pro/pro_frg::frg" + type;
 
-        return "/fore/search";
     }
+    // 前台管理操作结束
+
+    // 后台管理操作开始
+    @RequestMapping("/pro/listAllPros")
+    public String listAllProjects(Model model, Page page) {
+        List<Project> projects = projectService.listAllProjects(page);
+        page.setTotal(projectService.total());
+        model.addAttribute("projects", projects);
+        model.addAttribute("page", page);
+        return "back/pro/allPros";
+    }
+
+    @RequestMapping("/pro/fundingPros")
+    public String fundingPros(Model model) {
+        List<Project> list = projectService.getProjectsByState(21);
+        model.addAttribute("projects", list);
+        return "back/pro/fundingPros";
+    }
+
+    @RequestMapping("/pro/newApply")
+    public String newApply(Model model) {
+        List<Project> list = projectService.getProjectsByState(1);
+        model.addAttribute("projects", list);
+        return "back/pro/newApply";
+    }
+
+    @RequestMapping("/pro/drawApply")
+    public String drawApply(Model model) {
+        List<Project> list = projectService.getProjectsByState(41);
+        model.addAttribute("projects", list);
+        return "back/pro/drawApply";
+    }
+
+    @RequestMapping("/pro/delayApply")
+    public String delayApply(Model model) {
+        List<Project> list = projectService.getProjectsByState(22);
+        model.addAttribute("projects", list);
+        return "back/pro/delayApply";
+    }
+
+    // 新增放款
+    @RequestMapping("/pro/updateState")
+    public String updateState(Model model, String id, Integer state) {
+
+        if (state == 5) {
+            String userId = projectService.getProject(id).getUser().getUserId();
+            Double money = projectService.getProject(id).getCurrentMoney();
+            User user = userService.getById(userId);
+            user.setMoney(user.getMoney() + money);
+            userService.updateUser(user);
+            Trade trade = new Trade();
+            trade.setMoney(money);
+            trade.setInfo("提款到账");
+            trade.setUser(user);
+            tradeService.saveTrade(trade);
+        }
+
+        projectService.updateState(id, state);
+        return messageService.sendMessage(id, state);
+    }
+
+    @RequestMapping("/pro/lock")
+    public String lockApply(Model model) {
+        List<Project> list = projectService.getProjectsByState(99);
+        List<Project> list2 = projectService.getProjectByType(80);
+        list.addAll(list2);
+        model.addAttribute("projects", list);
+        return "back/pro/lock";
+    }
+
+    @RequestMapping("/pro/returnAll")
+    public String returnAll() {
+        List<Project> list = projectService.getProjectsByState(21);
+        for (Project project : list) {
+            returnMoney(project.getProjectId());
+        }
+        return "back/pro/home";
+    }
+
+    @RequestMapping("/pro/deletePro")
+    public String deletePro(Model model, String id) {
+        // returnMoney(id);
+        // projectService.deleteProject(id);
+        List<ProAndUsers> list = projectService.getProAndUsers(id);
+        User user = null;
+        for (ProAndUsers tmp : list) {
+            String userId = tmp.getUserId();
+            user = userService.getById(userId);
+            Double money = user.getMoney();
+            user.setMoney(money + tmp.getMoney());
+            userService.updateUser(user);
+            Trade trade = new Trade();
+            trade.setMoney(money);
+            trade.setInfo("撤销返款到账");
+            trade.setUser(user);
+            tradeService.saveTrade(trade);
+        }
+        messageService.sendMessage(id, 100);
+
+
+        projectService.updateState(id, 100);
+        return "back/home";
+    }
+
+    public void returnMoney(String id) {
+
+        List<ProAndUsers> list = projectService.getProAndUsers(id);
+        User user = null;
+
+        for (ProAndUsers tmp : list) {
+            String userId = tmp.getUserId();
+            user = userService.getById(userId);
+            Double money = user.getMoney();
+            user.setMoney(money + tmp.getMoney());
+            userService.updateUser(user);
+
+        }
+        projectService.updateState(id, 30);
+
+    }
+
+    // 后台管理操作结束
 }

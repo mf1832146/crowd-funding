@@ -28,7 +28,7 @@ public class User  implements Serializable {
 
     //账户余额
     @Column
-    private Integer money = 0;
+    private Double money = 0.0;
 
     @Column
     private String phone;
@@ -64,11 +64,11 @@ public class User  implements Serializable {
         this.password = password;
     }
 
-    public Integer getMoney() {
+    public Double getMoney() {
         return money;
     }
 
-    public void setMoney(Integer money) {
+    public void setMoney(Double money) {
         this.money = money;
     }
 

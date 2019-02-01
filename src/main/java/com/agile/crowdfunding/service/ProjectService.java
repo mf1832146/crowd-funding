@@ -1,6 +1,7 @@
 package com.agile.crowdfunding.service;
 
 import com.agile.crowdfunding.entity.*;
+import com.agile.crowdfunding.util.Page;
 import com.agile.crowdfunding.vo.ProjectInfoVo;
 
 import java.util.List;
@@ -34,5 +35,11 @@ public interface ProjectService {
 
     String launchProject(Integer uid, ProjectInfoVo projectInfoVo);
   
-    public void saveProAndUser(Order order);
+    void saveProAndUser(Order order);
+
+    List<Project> listAllProjects(Page page);
+
+    Integer total();
+
+    List<Project> getProjectsByState(Integer state);
 }
