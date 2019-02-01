@@ -52,6 +52,8 @@ public class UserController {
         model.addAttribute("user", user);
         List<Project> projects = projectService.getProjectsByUserId(id);
         model.addAttribute("projects", projects);
+        List<UserAndSups> orders = orderService.getOrdersByUserId(id);
+        model.addAttribute("orders", orders);
         return "fore/user/userDetails";
     }
 

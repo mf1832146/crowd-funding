@@ -255,7 +255,7 @@
 
             <div class="project-image">
                 <a th:href="@{'/detail/showDetail?projID='+${pro.}}"> <img
-                        class="cover-image" th:src="${pro.cover}" style="cursor: pointer"/>
+                        class="cover-image" th:src="${pro.projectDetail.getCover()}" style="cursor: pointer"/>
                 </a>
             </div>
             <div class="title" th:text="${pro.name}"></div>
@@ -263,10 +263,10 @@
 
             <!-- 限制长度 -->
             <div class="General-information"
-                 th:text="${#strings.substring(pro.purpose,0,95)+'......'}"
-                 th:if="${#strings.length(pro.purpose)>100}"></div>
-            <div class="General-information" th:text="${pro.purpose}"
-                 th:if="${#strings.length(pro.purpose)<100}"></div>
+                 th:text="${#strings.substring(pro.getProjectDetail().getPurpose(),0,95)+'......'}"
+                 th:if="${#strings.length(pro.getProjectDetail().getPurpose())>100}"></div>
+            <div class="General-information" th:text="${pro.getProjectDetail().getPurpose()}"
+                 th:if="${#strings.length(pro.getProjectDetail().getPurpose())<100}"></div>
             <div class="labels">
                 <span class="project-label" th:text="''"></span>
             </div>

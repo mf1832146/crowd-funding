@@ -7,7 +7,7 @@
 <script type="text/javascript" th:src="@{/js/jquery.min.js}"></script>
 <!-- bootstrap -->
 <link rel="stylesheet" type="text/css"
-	th:href="@{/bootstrap/css/bootstrap.min.css}" />
+	th:href="@{/css/bootstrap.min.css}" />
 <script type="text/javascript"
 	th:src="@{/bootstrap/js/bootstrap.min.js}"></script>
 <!-- jquery-validator -->
@@ -18,7 +18,7 @@
 </head>
 <body>
 
- 
+	<!-- 把表达式对应的值代替标签内的文本 -->
 	<div class="panel panel-default  text-center">
 		<!-- 向面板添加标题容器 -->
 		<div class="panel-heading">该用户发起项目</div>
@@ -48,8 +48,7 @@
 			</div>
 		</div>
 	</div>
-
-<div class="panel panel-default  text-center">
+	<div class="panel panel-default  text-center">
 		<!-- 向面板添加标题容器 -->
 		<div class="panel-heading">该用户支持项目</div>
 		<div class="panel-body">
@@ -67,13 +66,12 @@
 					<!-- th:remove被处理时会被删除 -->
 					<tbody th:remove="all-but-first">
 						<tr th:each="order : ${orders}">
-							<td><a class="btn btn-link" th:text="${order.projectId}"
+							<td><a class="btn btn-link" th:text="${order.projectName}"
 								th:href="'/pro/projectDetails?id='+${order.projectId}"></a></td>
 							<td
 								th:text="${'￥' + #numbers.formatDecimal(order.money, 1, 2)}">2</td>
-							<td th:text="${order.createTime}">3</td>
-							<td th:text="${order.endTime}">3</td>
-							 <td th:text="${order.phone}">3</td>
+							<td th:text="${order.getDate()}">3</td>
+							<td th:text="${order.getProState()}">3</td>
 						</tr>
 					</tbody>
 				</table>
