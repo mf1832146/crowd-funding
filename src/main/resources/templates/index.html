@@ -96,58 +96,45 @@
     });
 </script>
 
-
 <body>
 <!--  -->
 <div class="the-bigest-container">
     <header role="banner" class="probootstrap-header">
         <div class="container">
-            <a href="/fore/index" class="probootstrap-logo">423
-                CrowdFunding<span></span>
-            </a> <a href="#" class="probootstrap-burger-menu visible-xs"><i>Menu</i></a>
+            <a href="/fore/index" class="probootstrap-logo">423 CrowdFunding<span></span></a>
+            <a href="#" class="probootstrap-burger-menu visible-xs"><i>Menu</i></a>
             <div class="mobile-menu-overlay"></div>
-
             <nav role="navigation" class="probootstrap-nav hidden-xs">
                 <div class="button_su">
-                    <span class="su_button_circle"> </span> <a href="/launch/toLaunch"
-                                                               class="button_su_inner"> <span
-                        class="button_text_container">
-								发起众筹 </span>
-                </a>
+                    <span class="su_button_circle"> </span>
+                    <a href="/launch/toLaunch" class="button_su_inner">
+                        <span class="button_text_container">发起众筹</span>
+                    </a>
                 </div>
             </nav>
             <nav role="navigation" class="probootstrap-nav_login hidden-xs">
                 <div class="button_su_login" id="div_button">
-                    <span class="su_button_circle"> </span> <a href="#"
-                                                               class="button_su_inner_login"> <span
-                        class="button_text_container"
-                        onclick="window.location.href='/login/toLogin';"> 登录 </span>
-                </a>
+                    <span class="su_button_circle"> </span>
+                    <a href="#" class="button_su_inner_login">
+                        <span class="button_text_container" onclick="window.location.href='/login/toLogin';"> 登录 </span>
+                    </a>
                 </div>
             </nav>
             <div class="head-image" id="div_head_image"
                  onclick="window.location.href='/fore/home'">
-                <img th:src="@{/img/head.png}" class="round_icon" alt=""
-                     style="cursor: pointer">
-                <div class="news-alert-head" id="head_message_num"
-                     th:text="${messageNum}"></div>
+                <img th:src="@{/img/head.png}" class="round_icon" alt="" style="cursor: pointer">
+                <div class="news-alert-head" id="head_message_num" th:text="${messageNum}"></div>
                 <div class="head-image-table">
-                    <div class="head-image-nickname" th:text="${flag}"
-                         style="cursor: pointer"></div>
+                    <div class="head-image-nickname" th:text="${flag}" style="cursor: pointer"></div>
                     <div class="head-image-button" style="cursor: pointer">个人信息</div>
                     <div class="head-image-button" style="cursor: pointer">账户详情</div>
                     <div class="head-image-button" style="cursor: pointer">我的订单</div>
                     <div class="head-image-button" style="cursor: pointer">我的发起</div>
                     <div class="head-image-button" style="cursor: pointer">设置</div>
-                    <div class="head-image-button" style="cursor: pointer">
-                        消息
-                        <div class="news-alert-news" id="message_num"
-                             th:text="${messageNum}"></div>
+                    <div class="head-image-button" style="cursor: pointer">消息
+                        <div class="news-alert-news" id="message_num" th:text="${messageNum}"></div>
                     </div>
-                    <div class="head-image-button" style="cursor: pointer"
-                         onclick="exit()">退出
-                    </div>
-
+                    <div class="head-image-button" style="cursor: pointer" onclick="exit()">退出</div>
                 </div>
             </div>
             <div class="search d7">
@@ -156,8 +143,6 @@
                     <button type="submit"></button>
                 </form>
             </div>
-
-
         </div>
     </header>
 
