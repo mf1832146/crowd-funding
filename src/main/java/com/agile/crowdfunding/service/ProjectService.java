@@ -33,7 +33,7 @@ public interface ProjectService {
 
     List<Project> searchProject(String keyWord, int type, int state, String order);
 
-    String launchProject(Integer uid, ProjectInfoVo projectInfoVo);
+    String launchProject(String uid, ProjectInfoVo projectInfoVo);
   
     void saveProAndUser(Order order);
 

@@ -44,7 +44,7 @@ public class Project implements Serializable {
 
     //当前募集金额
     @Column
-    private Double currentMoney;
+    private Double currentMoney = 0.0;
 
     //项目创建时间 默认当前时间
     @Column

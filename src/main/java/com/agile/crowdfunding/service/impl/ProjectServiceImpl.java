@@ -10,6 +10,7 @@ import com.agile.crowdfunding.vo.ProjectInfoVo;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.thymeleaf.util.StringUtils;
 
 import javax.transaction.Transactional;
 import java.sql.Timestamp;
@@ -139,7 +140,7 @@ public class ProjectServiceImpl implements ProjectService {
     }
 
     @Override
-    public String launchProject(Integer uid, ProjectInfoVo projectInfoVo) {
+    public String launchProject(String uid, ProjectInfoVo projectInfoVo) {
         if (projectInfoVo == null) {
             throw new GlobalException(CodeMsg.SERVER_ERROR);
         }
@@ -150,7 +151,7 @@ public class ProjectServiceImpl implements ProjectService {
         Project newProject = new Project();
         newProject.setName(projectInfoVo.getProTitle());
         User tmpUser = new User();
-        tmpUser.setUserId(""+uid);
+        tmpUser.setUserId(uid);
         newProject.setUser(tmpUser);// 测试用
         newProject.setState(1);
         newProject.setType(1);
@@ -178,6 +179,15 @@ public class ProjectServiceImpl implements ProjectService {
         newProjectDetail.setCoverStory(projectInfoVo.getProCoverStory());
 
         projectDetailRepository.save(newProjectDetail);
+
+        //保存reward
+        Reward reward = new Reward();
+        reward.setProjectId(newProject.getProjectId());
+        reward.setOrderMoney(projectInfoVo.getProAmountForReward());
+        reward.setReturnType(""+projectInfoVo.getProTypeOfReward());
+        reward.setReturnDetail(projectInfoVo.getProReward());
+
+        rewardRepository.save(reward);
 
         // RETURN_LEVEL
         /////////////////////////

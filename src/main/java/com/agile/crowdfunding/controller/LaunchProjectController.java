@@ -4,11 +4,14 @@ import com.agile.crowdfunding.dao.ImageRepository;
 import com.agile.crowdfunding.entity.Image;
 import com.agile.crowdfunding.service.ProjectService;
 import com.agile.crowdfunding.util.AuthorizationUtils;
+import com.agile.crowdfunding.util.RandomUtils;
 import com.agile.crowdfunding.vo.ProjectInfoVo;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
+import org.springframework.util.ClassUtils;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -20,6 +23,7 @@ import javax.servlet.http.HttpSession;
 import java.io.File;
 import java.io.IOException;
 import java.util.List;
+import java.util.UUID;
 
 @Controller
 @RequestMapping("/launch")
@@ -34,6 +38,15 @@ public class LaunchProjectController {
 
     @Autowired
     ImageRepository newImageDao;
+
+    @Value("${image.upload.path}")
+    private String imageUploadPath;
+
+    @Value("${image.url}")
+    private String imageUrl;
+
+
+
 
     @RequestMapping("/toLaunch")
     public String toLaunch(HttpSession session) {
@@ -54,7 +67,7 @@ public class LaunchProjectController {
         if (!auth.check(session))
             return "redirect:/login/toLogin";
 
-        int uid = (int) session.getAttribute("myId");
+        String uid = (String) session.getAttribute("myId");
 
         // 为projectInfoVo赋值
         projectInfoVo.setProName(params.getParameter("name"));
@@ -81,9 +94,10 @@ public class LaunchProjectController {
         // 描述图片
         log.info("描述图片：");
         List<MultipartFile> files = ((MultipartHttpServletRequest) request).getFiles("file");
-        String prePath = "/springUpload/springUpload/";
-        String decPath = prePath + "describePhoto/pid_" + myPid + "/";// 根据pid检索项目描述图片
-        File decDir = new File(decPath);
+        //String prePath = ClassUtils.getDefaultClassLoader().getResource("").getPath() + "images/";
+        //String prePath = "/var/spring/uploaded_files/";
+        String prePath = imageUploadPath;
+        File decDir = new File(prePath);
         if (!decDir.exists())
             decDir.mkdirs();
         MultipartFile file = null;
@@ -92,16 +106,21 @@ public class LaunchProjectController {
             file = files.get(i);
             if (!file.isEmpty()) {
                 log.info(file.getOriginalFilename());
-                String path = decPath + file.getOriginalFilename();
-                log.info(path);
-                file.transferTo(new File(path));
+                String filename = UUID.randomUUID() + file.getOriginalFilename();
+                String locPath = prePath + filename;
+                String webPath = imageUrl + filename;
+
+                log.info(locPath);
+                file.transferTo(new File(locPath));
                 // 插入数据库图片表
-                newImage.setName(file.getOriginalFilename());
+                newImage.setName(webPath);
                 newImage.setType(2);
                 newImage.setProjectId(myPid);
                 newImageDao.save(newImage);
             }
         }
+        //保存reward信息
+
         return "redirect:/fore/index";
     }
 }
