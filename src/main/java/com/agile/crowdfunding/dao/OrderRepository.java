@@ -19,7 +19,7 @@ public interface OrderRepository extends JpaRepository<Order,String> {
 
     //通过id获取用户和支持者信息
     @Query(value = "select * from user_and_sups where user_id = ?1", nativeQuery = true)
-    List<UserAndSups> getOrdersByUserId(String userId);
+    List<Order> getOrdersByUserId(String userId);
 
     //获取已经支付完成的订单
     @Query(value = "select * from crowd_funding_order where user_id = ?1 and state = 1", nativeQuery = true)

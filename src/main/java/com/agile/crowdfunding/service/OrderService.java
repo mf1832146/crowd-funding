@@ -3,6 +3,7 @@ package com.agile.crowdfunding.service;
 import com.agile.crowdfunding.entity.Order;
 import com.agile.crowdfunding.util.Page;
 import com.agile.crowdfunding.vo.UserAndSups;
+import org.aspectj.weaver.ast.Or;
 
 import java.util.List;
 
@@ -18,6 +19,8 @@ public interface OrderService {
     List<Order> listOrders(Page page);
 
     List<UserAndSups> getOrdersByUserId(String userId);
+
+    List<Order> getAllOrdersByUserId(String userId);
 
     List<Order> getOrdersPayed(String id);
 

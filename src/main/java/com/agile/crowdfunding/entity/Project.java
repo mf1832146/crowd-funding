@@ -1,5 +1,6 @@
 package com.agile.crowdfunding.entity;
 
+import com.agile.crowdfunding.util.StateUtils;
 import com.alibaba.fastjson.JSONObject;
 import org.hibernate.annotations.GenericGenerator;
 
@@ -59,6 +60,13 @@ public class Project implements Serializable {
     @JoinColumn(name = "projectId", insertable = false, updatable = false)
     private ProjectDetail projectDetail;
 
+    //这个属性供视图view-model使用
+    @Column
+    private String stateName;
+
+    public String getStateName() {
+        return stateName;
+    }
 
     public String toString() {
         return JSONObject.toJSONString(this);
@@ -86,6 +94,11 @@ public class Project implements Serializable {
 
     public void setState(Integer state) {
         this.state = state;
+        this.stateName = StateUtils.getStateName(state);
+    }
+
+    public void setStateName(String stateName) {
+        this.stateName = stateName;
     }
 
     public Integer getType() {

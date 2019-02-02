@@ -7,6 +7,7 @@ import com.agile.crowdfunding.service.OrderService;
 import com.agile.crowdfunding.service.ProjectService;
 import com.agile.crowdfunding.service.UserService;
 import com.agile.crowdfunding.vo.UserAndSups;
+import org.aspectj.weaver.ast.Or;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -57,7 +58,7 @@ public class OrderRepositoryTest {
     //通过id获取用户和支持者信息
     @Test
     public void testCGetOrdersByUserId(){
-        List<UserAndSups> userAndSupsList = orderRepository.getOrdersByUserId("40289f23687aa67501687aa6d4f90000");
+        List<Order> userAndSupsList = orderRepository.getOrdersByUserId("40289f23687aa67501687aa6d4f90000");
         for (int i = 0; i < userAndSupsList.size(); i++){
             System.out.println(userAndSupsList.get(i).getOrderId());
         }

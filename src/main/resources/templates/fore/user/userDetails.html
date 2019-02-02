@@ -55,24 +55,25 @@
 			<div class="container ">
 				<table class="table table-bordered table-hover">
 					<thead>
-						<tr>
-							<th class="col-md-3">项目名</th>
-							<th class="col-md-2">支持金额</th>
-							<th class="col-md-2">支持时间</th>
-							<th class="col-md-2">结束时间</th>
-							<th class="col-md-2">预留手机</th>
-						</tr>
+					<tr>
+						<th class="col-md-3">项目名</th>
+						<th class="col-md-2">支持金额</th>
+						<th class="col-md-2">支持时间</th>
+						<th class="col-md-2">项目状态</th>
+
+					</tr>
 					</thead>
 					<!-- th:remove被处理时会被删除 -->
 					<tbody th:remove="all-but-first">
-						<tr th:each="order : ${orders}">
-							<td><a class="btn btn-link" th:text="${order.projectName}"
-								th:href="'/pro/projectDetails?id='+${order.projectId}"></a></td>
-							<td
+					<tr th:each="order : ${orders}">
+						<td><a class="btn btn-link" th:text="${order.projectName}"
+							   th:href="'/pro/fore/projectDetails?id='+${order.projectId}"></a></td>
+						<td
 								th:text="${'￥' + #numbers.formatDecimal(order.money, 1, 2)}">2</td>
-							<td th:text="${order.getDate()}">3</td>
-							<td th:text="${order.getProState()}">3</td>
-						</tr>
+						<td th:text="${order.date}">3</td>
+
+						<td th:text="${order.proState}">3</td>
+					</tr>
 					</tbody>
 				</table>
 			</div>
