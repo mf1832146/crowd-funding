@@ -298,32 +298,19 @@
             <img th:src="${projectDetail.cover}" class="detail-content-coverimage-cover" alt="">
         </div>
         <div class="detail-content-others" th:with="percent=${project.currentMoney}/${project.targetMoney}">
-            <div class="detail-content-others-days">
-                截止日期
-            </div>
-            <div class="detail-content-others-moneys">
-                已筹款数目
-            </div>
-            <div class="detail-content-others-state">
-                目标金额
-            </div>
-            <div class="detail-content-others-days-value" th:text="${#dates.format(project.endTime,'yyyy-MM-dd')}">
-            </div>
-            <div class="detail-content-others-moneys-value" th:text="￥+${project.currentMoney}">
-
-            </div>
-            <div class="detail-content-others-state-value" th:text="￥+${project.targetMoney}">
-            </div>
+            <div class="detail-content-others-days">截止日期</div>
+            <div class="detail-content-others-moneys">已筹款数目</div>
+            <div class="detail-content-others-state">目标金额</div>
+            <div class="detail-content-others-days-value" th:text="${#dates.format(project.endTime,'yyyy-MM-dd')}"></div>
+            <div class="detail-content-others-moneys-value" th:text="￥+${project.currentMoney}"></div>
+            <div class="detail-content-others-state-value" th:text="￥+${project.targetMoney}"></div>
             <canvas class="thewater" id="c"></canvas>
-            <input type="text" id="r" th:value="${#numbers.formatDecimal(percent * 100, 1, 1)}" style="display: none">
+            <input type="text" id="r" th:value="${#numbers.formatDecimal(percent * 100, 1, 1)}" style="display: none"/>
             <nav role="navigation" class="probootstrap-nav_subscribe hidden-xs">
                 <div class="button_su_subscribe" th:if="${project.state==21 or project.state == 22}">
-                            <span class="su_button_circle">
-                            </span>
+                            <span class="su_button_circle"></span>
                     <a onclick="displayPay()" class="button_su_inner_subscribe" style="cursor:pointer">
-                                <span class="button_text_container">
-                                    立即支持
-                                </span>
+                                <span class="button_text_container">立即支持</span>
                     </a>
                 </div>
             </nav>
@@ -419,8 +406,8 @@
         <div class="detail-pay-moneyinput">
             <div class="detail-pay-money-title">请输入金额</div>
             <input class="detail-pay-money-input" id="money" name="money">
-            <input th:type="hidden" id="projectId" name="projectId" th:value="${project.projectId}"></input>
-            <input th:type="hidden" id="orderType" name="orderType" th:value="-1"></input>
+            <input th:type="hidden" id="projectId" name="projectId" th:value="${project.projectId}">
+            <input th:type="hidden" id="orderType" name="orderType" th:value="-1">
         </div>
         <div class="detail-pay-ways">
             <div class="detail-pay-way" id="zhifubao">

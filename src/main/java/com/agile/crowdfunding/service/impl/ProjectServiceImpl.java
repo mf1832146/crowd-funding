@@ -15,7 +15,6 @@ import javax.transaction.Transactional;
 import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.Date;
 import java.util.List;
 
 
@@ -40,6 +39,9 @@ public class ProjectServiceImpl implements ProjectService {
 
     @Autowired
     ImageRepository imageRepository;
+
+    @Autowired
+    UserRepository userRepository;
 
     @Override
     public List<Project> findProjectsTop3() {
@@ -139,7 +141,7 @@ public class ProjectServiceImpl implements ProjectService {
     }
 
     @Override
-    public String launchProject(Integer uid, ProjectInfoVo projectInfoVo) {
+    public String launchProject(String uid, ProjectInfoVo projectInfoVo) {
         if (projectInfoVo == null) {
             throw new GlobalException(CodeMsg.SERVER_ERROR);
         }
@@ -149,9 +151,8 @@ public class ProjectServiceImpl implements ProjectService {
         /////////////////////////
         Project newProject = new Project();
         newProject.setName(projectInfoVo.getProTitle());
-        User tmpUser = new User();
-        tmpUser.setUserId(""+uid);
-        newProject.setUser(tmpUser);// 测试用
+        User tmpUser = userRepository.findFirstByUserId(uid);
+        newProject.setUser(tmpUser);
         newProject.setState(1);
         newProject.setType(1);
         newProject.setTargetMoney(projectInfoVo.getProTargetMoney());
@@ -181,14 +182,13 @@ public class ProjectServiceImpl implements ProjectService {
 
         // RETURN_LEVEL
         /////////////////////////
-        ReturnLevel newReturnLevel = new ReturnLevel();
+        Reward newReturnLevel = new Reward();
         newReturnLevel.setProjectId(newProject.getProjectId());
-        newReturnLevel.setReturnType(projectInfoVo.getProTypeOfReward());
+        newReturnLevel.setReturnType(""+projectInfoVo.getProTypeOfReward());
         newReturnLevel.setOrderMoney(projectInfoVo.getProAmountForReward());
         newReturnLevel.setReturnDetail(projectInfoVo.getProReward());
         //修改
-        // projectDao.insertReturnLevel(newReturnLevel);
-
+        rewardRepository.save(newReturnLevel);
         return newProject.getProjectId();
     }
 }

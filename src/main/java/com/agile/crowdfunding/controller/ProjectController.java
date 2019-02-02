@@ -266,5 +266,11 @@ public class ProjectController {
 
     }
 
+    @RequestMapping("/pro/back/projectDetails")
+    public String userDetails(Model model, String id) {
+        Project project = projectService.getProject(id);
+        model.addAttribute("project", project);
+        return "back/pro/projectDetails";
+    }
     // 后台管理操作结束
 }
