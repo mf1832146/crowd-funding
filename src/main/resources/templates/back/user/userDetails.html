@@ -51,7 +51,7 @@
 								th:text="${'￥' + #numbers.formatDecimal(pro.targetMoney, 1, 2)}">2</td>
 							<td th:text="${pro.createTime}">3</td>
 							<td th:text="${pro.endTime}">3</td>
-							<td th:text="${pro.state}">3</td>
+							<td th:text="${pro.stateName}">3</td>
 						</tr>
 					</tbody>
 				</table>
@@ -83,7 +83,7 @@
 								th:text="${'￥' + #numbers.formatDecimal(order.money, 1, 2)}">2</td>
 							<td th:text="${order.date}">3</td>
 							 
-							 <td th:text="${order.proState}">3</td>
+							 <td th:text="${order.stateName}">3</td>
 						</tr>
 					</tbody>
 				</table>
